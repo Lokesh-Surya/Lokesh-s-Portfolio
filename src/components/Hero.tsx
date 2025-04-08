@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Avatar } from "@/components/ui/avatar";
 
 const Hero = () => {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
@@ -30,42 +29,25 @@ const Hero = () => {
       <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
       
       <div className="container mx-auto px-4 z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Text Content - Left Side */}
-          <div className="md:w-1/2 text-center md:text-left">
-            {/* "I'm Lokesh" text */}
-            <h2 className="text-2xl md:text-3xl font-medium mb-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              I'm <span className="text-gradient font-bold">Lokesh</span>
-            </h2>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              Digital Transformation <span className="text-gradient">Engineer</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              Innovating at the intersection of technology, business, and design to drive meaningful change and digital excellence.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <Button asChild size="lg" className="rounded-full">
-                <a href="#contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></a>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full">
-                <a href="#about">Learn More</a>
-              </Button>
-            </div>
-          </div>
+        <div className="max-w-3xl mx-auto text-center">
+          {/* "I'm Lokesh" text */}
+          <h2 className="text-2xl md:text-3xl font-medium mb-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            I'm <span className="text-gradient font-bold">Lokesh</span>
+          </h2>
           
-          {/* Image Placeholder - Right Side */}
-          <div className="md:w-1/2 flex justify-center md:justify-end animate-fade-in" style={{ animationDelay: "0.5s" }}>
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden bg-gradient-to-br from-primary/10 to-blue-400/20 border border-white/20 shadow-lg">
-              {/* Placeholder image - replace src with your actual image when available */}
-              <div className="absolute inset-0 flex items-center justify-center text-primary/40">
-                <Avatar className="w-full h-full bg-transparent">
-                  <div className="w-full h-full flex items-center justify-center text-7xl font-light">
-                    L
-                  </div>
-                </Avatar>
-              </div>
-            </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            Digital Transformation <span className="text-gradient">Engineer</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            Innovating at the intersection of technology, business, and design to drive meaningful change and digital excellence.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <Button asChild size="lg" className="rounded-full">
+              <a href="#contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></a>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="rounded-full">
+              <a href="#about">Learn More</a>
+            </Button>
           </div>
         </div>
       </div>
