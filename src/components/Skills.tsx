@@ -1,33 +1,56 @@
 
-import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Laptop, Target, Users } from "lucide-react";
 
 const Skills = () => {
   const [animated, setAnimated] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   
-  const technicalSkills = [
-    { name: "Digital Strategy", value: 95 },
-    { name: "Enterprise Architecture", value: 90 },
-    { name: "Data Analytics", value: 85 },
-    { name: "AI Implementation", value: 80 },
-    { name: "Cloud Infrastructure", value: 75 }
-  ];
-  
-  const managementSkills = [
-    { name: "Project Management", value: 90 },
-    { name: "Change Management", value: 85 },
-    { name: "Team Leadership", value: 95 },
-    { name: "Business Analysis", value: 80 },
-    { name: "Stakeholder Management", value: 90 }
-  ];
-  
-  const technologies = [
-    "AI/ML", "Cloud Computing", "Blockchain", "IoT", "Big Data", 
-    "DevOps", "Microservices", "Agile", "RPA", "UI/UX", "API Integration",
-    "Cybersecurity"
+  const skillCategories = [
+    {
+      icon: <Target className="h-8 w-8 text-primary" />,
+      title: "Digital Strategy",
+      description: "Translating business goals into comprehensive digital roadmaps",
+      skills: [
+        "Digital Transformation", 
+        "Innovation Strategy",
+        "Technology Roadmapping",
+        "Business Process Redesign",
+        "Enterprise Architecture",
+        "Digital Maturity Assessment"
+      ]
+    },
+    {
+      icon: <Laptop className="h-8 w-8 text-primary" />,
+      title: "Technical",
+      description: "Advanced technical competencies and technology implementation",
+      skills: [
+        "AI/ML Implementation", 
+        "Cloud Architecture", 
+        "Data Analytics",
+        "Cybersecurity",
+        "IoT Solutions",
+        "API Integration",
+        "Blockchain",
+        "DevOps"
+      ]
+    },
+    {
+      icon: <Users className="h-8 w-8 text-primary" />,
+      title: "Leadership",
+      description: "Guiding teams and stakeholders through digital change",
+      skills: [
+        "Change Management", 
+        "Team Leadership", 
+        "Stakeholder Management",
+        "Project Management",
+        "Cross-functional Collaboration",
+        "Training & Enablement",
+        "Strategic Communication"
+      ]
+    }
   ];
   
   useEffect(() => {
@@ -53,71 +76,50 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" ref={sectionRef} className="section-padding">
+    <section id="skills" ref={sectionRef} className="section-padding bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Skills</h2>
-        <div className="w-20 h-1 bg-primary mx-auto mb-12"></div>
+        <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+          Combining strategic vision with technical expertise to orchestrate successful digital transformation initiatives
+        </p>
         
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Technical Skills */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">Technical Expertise</h3>
-            <div className="space-y-6">
-              {technicalSkills.map((skill, index) => (
-                <div key={`tech-${index}`}>
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span>{skill.value}%</span>
+        <div className="grid md:grid-cols-3 gap-8">
+          {skillCategories.map((category, index) => (
+            <Card 
+              key={`category-${index}`}
+              className={`overflow-hidden hover-card ${animated ? 'animate-fade-in' : 'opacity-0'}`}
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
+              <div className="h-2 bg-primary"></div>
+              <CardContent className="pt-6 pb-0">
+                <div className="flex flex-col items-center text-center mb-6">
+                  <div className="p-3 bg-blue-50 rounded-full mb-4">
+                    {category.icon}
                   </div>
-                  <Progress 
-                    value={animated ? skill.value : 0} 
-                    className="h-2 transition-all duration-1000" 
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  />
+                  <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                  <p className="text-gray-600 text-sm">{category.description}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Management Skills */}
-          <div>
-            <h3 className="text-xl font-bold mb-6">Management Skills</h3>
-            <div className="space-y-6">
-              {managementSkills.map((skill, index) => (
-                <div key={`mgmt-${index}`}>
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span>{skill.value}%</span>
-                  </div>
-                  <Progress 
-                    value={animated ? skill.value : 0} 
-                    className="h-2 transition-all duration-1000" 
-                    style={{ transitionDelay: `${(index + 5) * 100}ms` }}
-                  />
+                
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {category.skills.map((skill, i) => (
+                    <Badge 
+                      key={`skill-${i}`} 
+                      variant="outline"
+                      className={`transition-all ${animated ? 'opacity-100' : 'opacity-0'}`}
+                      style={{ transitionDelay: `${(index * 200) + (i * 100)}ms` }}
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </CardContent>
+              <CardFooter className="flex justify-center pt-6 pb-6">
+                <div className="h-1 w-12 bg-blue-100 rounded-full"></div>
+              </CardFooter>
+            </Card>
+          ))}
         </div>
-        
-        {/* Technologies */}
-        <Card className="mt-12">
-          <CardContent className="pt-6">
-            <h3 className="text-xl font-bold mb-6">Technologies & Frameworks</h3>
-            <div className="flex flex-wrap gap-2">
-              {technologies.map((tech, index) => (
-                <Badge 
-                  key={`tech-${index}`} 
-                  variant="secondary" 
-                  className={`text-sm py-2 px-3 ${animated ? 'opacity-100' : 'opacity-0'}`}
-                  style={{ transition: 'opacity 0.5s ease', transitionDelay: `${index * 50}ms` }}
-                >
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );

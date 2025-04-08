@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 
 const Header = () => {
@@ -25,59 +26,113 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 shadow-md backdrop-blur-sm' : 'bg-transparent'
+        isScrolled ? 'bg-white/90 shadow-md backdrop-blur-md' : 'bg-transparent'
       }`}
     >
-      <div className="container flex items-center justify-between h-20 px-4">
-        <a href="#hero" className="text-xl font-bold text-primary">
-          Lokesh
-        </a>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-            About
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          <a href="#hero" className="text-xl font-bold flex items-center">
+            <span className="text-gradient">Lokesh</span>
+            <span className="ml-2 h-2 w-2 rounded-full bg-primary"></span>
           </a>
           
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="text-sm font-medium flex items-center">
-                Innovation <ChevronDown className="ml-1 h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                <a href="#startups" className="w-full">Startups</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="#research" className="w-full">Research</a>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <a href="#patent" className="w-full">Patent</a>
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {/* Desktop Navigation */}
+          <NavigationMenu className="hidden md:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  href="#about"
+                  className={navigationMenuTriggerStyle()}
+                >
+                  About
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Innovation</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 w-[200px]">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#startups"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Startups</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Entrepreneurial ventures
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#research"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Research</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Academic publications
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#patent"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Patent</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Intellectual property
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  href="#skills"
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Skills
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  href="#testimonials"
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Testimonials
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          
+          {/* Contact Button */}
+          <div className="hidden md:block">
+            <Button asChild size="sm" className="rounded-full">
+              <a href="#contact">Contact Me</a>
+            </Button>
+          </div>
 
-          <a href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
-            Skills
-          </a>
-          <a href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors">
-            Testimonials
-          </a>
-          <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-            Contact
-          </a>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-gray-500 hover:text-gray-700"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-          </svg>
-        </button>
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-gray-700 hover:text-primary"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -88,7 +143,9 @@ const Header = () => {
               About
             </a>
             <div className="border-t border-gray-100 py-2">
-              <p className="text-sm font-medium text-gray-500 mb-2">Innovation</p>
+              <p className="flex items-center text-sm font-medium text-gray-700 mb-2">
+                Innovation <ChevronDown className="ml-1 h-3 w-3" />
+              </p>
               <div className="pl-4 flex flex-col space-y-2">
                 <a href="#startups" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Startups
@@ -110,6 +167,10 @@ const Header = () => {
             <a href="#contact" className="text-sm font-medium py-2 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Contact
             </a>
+            
+            <Button className="mt-2 rounded-full" size="sm">
+              <a href="#contact">Contact Me</a>
+            </Button>
           </div>
         </div>
       )}
