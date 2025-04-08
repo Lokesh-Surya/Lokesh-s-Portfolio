@@ -26,13 +26,13 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 shadow-md backdrop-blur-md' : 'bg-transparent'
+        isScrolled ? 'bg-[#1A1F2C]/90 shadow-md backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <a href="#hero" className="text-xl font-bold flex items-center">
-            <span className="text-gradient">Lokesh</span>
+            <span className={`${isScrolled ? 'text-white' : 'text-gradient'}`}>Lokesh</span>
             <span className="ml-2 h-2 w-2 rounded-full bg-primary"></span>
           </a>
           
@@ -42,14 +42,14 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#about"
-                  className={navigationMenuTriggerStyle()}
+                  className={cn(navigationMenuTriggerStyle(), isScrolled ? 'text-white hover:text-white/80' : '')}
                 >
                   About
                 </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Innovation</NavigationMenuTrigger>
+                <NavigationMenuTrigger className={isScrolled ? 'text-white hover:text-white/80' : ''}>Innovation</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[200px]">
                     <li>
@@ -98,7 +98,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#skills"
-                  className={navigationMenuTriggerStyle()}
+                  className={cn(navigationMenuTriggerStyle(), isScrolled ? 'text-white hover:text-white/80' : '')}
                 >
                   Skills
                 </NavigationMenuLink>
@@ -107,7 +107,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#testimonials"
-                  className={navigationMenuTriggerStyle()}
+                  className={cn(navigationMenuTriggerStyle(), isScrolled ? 'text-white hover:text-white/80' : '')}
                 >
                   Testimonials
                 </NavigationMenuLink>
@@ -117,14 +117,14 @@ const Header = () => {
           
           {/* Contact Button */}
           <div className="hidden md:block">
-            <Button asChild size="sm" className="rounded-full">
+            <Button asChild size="sm" className="rounded-full bg-primary/90 hover:bg-primary">
               <a href="#contact">Contact Me</a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-700 hover:text-primary"
+            className={`md:hidden ${isScrolled ? 'text-white' : 'text-gray-700'} hover:text-primary`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -137,34 +137,34 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-[#1A1F2C] shadow-lg">
           <div className="container py-4 px-4 flex flex-col space-y-4">
-            <a href="#about" className="text-sm font-medium py-2 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#about" className="text-sm font-medium py-2 text-white hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               About
             </a>
-            <div className="border-t border-gray-100 py-2">
-              <p className="flex items-center text-sm font-medium text-gray-700 mb-2">
+            <div className="border-t border-gray-700 py-2">
+              <p className="flex items-center text-sm font-medium text-gray-300 mb-2">
                 Innovation <ChevronDown className="ml-1 h-3 w-3" />
               </p>
               <div className="pl-4 flex flex-col space-y-2">
-                <a href="#startups" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                <a href="#startups" className="text-sm text-gray-300 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Startups
                 </a>
-                <a href="#research" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                <a href="#research" className="text-sm text-gray-300 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Research
                 </a>
-                <a href="#patent" className="text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                <a href="#patent" className="text-sm text-gray-300 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Patent
                 </a>
               </div>
             </div>
-            <a href="#skills" className="text-sm font-medium py-2 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#skills" className="text-sm font-medium py-2 text-white hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Skills
             </a>
-            <a href="#testimonials" className="text-sm font-medium py-2 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#testimonials" className="text-sm font-medium py-2 text-white hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Testimonials
             </a>
-            <a href="#contact" className="text-sm font-medium py-2 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#contact" className="text-sm font-medium py-2 text-white hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Contact
             </a>
             
