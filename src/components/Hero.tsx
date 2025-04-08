@@ -30,14 +30,6 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Profile image placeholder */}
-          <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-primary/80 to-blue-400/80 rounded-full mx-auto mb-6 overflow-hidden flex items-center justify-center border-4 border-white/10 shadow-lg animate-fade-in">
-            <span className="text-white text-3xl font-light">L</span>
-            {/* Placeholder for an actual image:
-            <img src="/path/to/profile-image.jpg" alt="Lokesh" className="w-full h-full object-cover" /> 
-            */}
-          </div>
-          
           {/* "I'm Lokesh" text */}
           <h2 className="text-2xl md:text-3xl font-medium mb-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             I'm <span className="text-gradient font-bold">Lokesh</span>
