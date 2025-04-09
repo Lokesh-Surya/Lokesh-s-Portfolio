@@ -16,16 +16,16 @@ const Footer = () => {
               Empowering organizations through strategic digital transformation and innovative solutions.
             </p>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-gray-800">
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
                 <Mail className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-gray-800">
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-gray-800">
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
                 <Github className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-gray-800">
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
                 <Twitter className="h-5 w-5" />
               </Button>
             </div>

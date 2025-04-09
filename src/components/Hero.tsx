@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 const Hero = () => {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
@@ -23,6 +23,11 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center relative overflow-hidden">
+      {/* Background with gradient/image */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-slate-100 z-0">
+        <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000&auto=format')] bg-cover bg-center"></div>
+      </div>
+      
       {/* Background gradient effects */}
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
       <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl"></div>
@@ -47,6 +52,11 @@ const Hero = () => {
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full">
               <a href="#about">Learn More</a>
+            </Button>
+            <Button asChild variant="secondary" size="lg" className="rounded-full">
+              <a href="/resume.pdf" download="Lokesh_Resume.pdf">
+                <Download className="mr-2 h-4 w-4" /> Download Resume
+              </a>
             </Button>
           </div>
         </div>
