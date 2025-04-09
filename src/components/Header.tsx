@@ -36,8 +36,7 @@ const Header = () => {
             <Avatar className="h-8 w-8 bg-gradient-to-br from-primary/80 to-blue-400/80">
               <AvatarFallback className="text-white">L</AvatarFallback>
             </Avatar>
-            <span className="text-primary">Lokesh</span>
-            <span className="ml-1 h-2 w-2 rounded-full bg-primary"></span>
+            <span className="h-2 w-2 rounded-full bg-primary"></span>
           </a>
           
           {/* Desktop Navigation */}
