@@ -101,6 +101,15 @@ const Header = () => {
               
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  href="#certifications"
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Certifications
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
+                <NavigationMenuLink
                   href="#skills"
                   className={navigationMenuTriggerStyle()}
                 >
@@ -162,6 +171,9 @@ const Header = () => {
                 </a>
               </div>
             </div>
+            <a href="#certifications" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              Certifications
+            </a>
             <a href="#skills" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Skills
             </a>

@@ -34,17 +34,17 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Profile image placeholder */}
-          <div className="flex justify-center mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
-            <Avatar className="h-24 w-24 border-4 border-white shadow-lg">
-              <AvatarFallback className="text-3xl bg-gradient-to-br from-blue-400 to-primary text-white">
+          {/* Profile image placeholder - larger size */}
+          <div className="flex justify-center mb-8 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+            <Avatar className="h-32 w-32 border-4 border-white shadow-lg">
+              <AvatarFallback className="text-4xl bg-gradient-to-br from-blue-400 to-primary text-white">
                 L
               </AvatarFallback>
             </Avatar>
           </div>
           
           {/* "I'm Lokesh" text - now bigger */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             I'm <span className="text-gradient">Lokesh</span>
           </h2>
           

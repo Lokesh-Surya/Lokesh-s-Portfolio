@@ -48,6 +48,9 @@ const Footer = () => {
                 <a href="#patent" className="text-gray-400 hover:text-primary transition-colors">Patent</a>
               </li>
               <li>
+                <a href="#certifications" className="text-gray-400 hover:text-primary transition-colors">Certifications</a>
+              </li>
+              <li>
                 <a href="#skills" className="text-gray-400 hover:text-primary transition-colors">Skills</a>
               </li>
             </ul>
