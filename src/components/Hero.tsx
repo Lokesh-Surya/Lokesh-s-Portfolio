@@ -36,16 +36,16 @@ const Hero = () => {
         <div className="max-w-3xl mx-auto text-center">
           {/* Profile image placeholder - larger size */}
           <div className="flex justify-center mb-8 animate-fade-in" style={{ animationDelay: "0.05s" }}>
-            <Avatar className="h-32 w-32 border-4 border-white shadow-lg">
-              <AvatarFallback className="text-4xl bg-gradient-to-br from-blue-400 to-primary text-white">
+            <Avatar className="h-40 w-40 border-4 border-white shadow-lg">
+              <AvatarFallback className="text-5xl bg-gradient-to-br from-blue-400 to-primary text-white">
                 L
               </AvatarFallback>
             </Avatar>
           </div>
           
           {/* "I'm Lokesh" text - now bigger */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-3 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            I'm <span className="text-gradient">Lokesh</span>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-3 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            I'm <span className="text-gradient">Lokesh.</span>
           </h2>
           
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>

@@ -11,92 +11,12 @@ const Innovation = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Innovation</h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-12"></div>
 
-        <Tabs defaultValue="startups" className="w-full">
+        <Tabs defaultValue="research" className="w-full">
           <TabsList className="w-full max-w-md mx-auto grid grid-cols-3 mb-12">
-            <TabsTrigger value="startups">Startups</TabsTrigger>
             <TabsTrigger value="research">Research</TabsTrigger>
             <TabsTrigger value="patent">Patent</TabsTrigger>
+            <TabsTrigger value="projects">Projects</TabsTrigger>
           </TabsList>
-
-          {/* Startups Section */}
-          <TabsContent value="startups" className="animate-slide-in">
-            <div id="startups" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Startup 1 */}
-              <Card className="hover-card">
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between items-start">
-                    <CardTitle className="text-xl">TechSynergy</CardTitle>
-                    <Badge>2020-Present</Badge>
-                  </div>
-                  <CardDescription>Founder & CTO</CardDescription>
-                </CardHeader>
-                <CardContent className="pb-2">
-                  <p>
-                    AI-powered platform that optimizes enterprise workflows through predictive analytics and automated decision-making processes.
-                  </p>
-                </CardContent>
-                <CardFooter className="flex justify-between items-center pt-2">
-                  <div className="flex gap-2">
-                    <Badge variant="outline">AI</Badge>
-                    <Badge variant="outline">SaaS</Badge>
-                  </div>
-                  <a href="#" className="inline-flex items-center text-primary text-sm">
-                    Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </a>
-                </CardFooter>
-              </Card>
-
-              {/* Startup 2 */}
-              <Card className="hover-card">
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between items-start">
-                    <CardTitle className="text-xl">BlockChain Solutions</CardTitle>
-                    <Badge>2018-2020</Badge>
-                  </div>
-                  <CardDescription>Co-founder</CardDescription>
-                </CardHeader>
-                <CardContent className="pb-2">
-                  <p>
-                    Blockchain-based supply chain verification platform that ensures transparency and traceability for global enterprises.
-                  </p>
-                </CardContent>
-                <CardFooter className="flex justify-between items-center pt-2">
-                  <div className="flex gap-2">
-                    <Badge variant="outline">Blockchain</Badge>
-                    <Badge variant="outline">Supply Chain</Badge>
-                  </div>
-                  <a href="#" className="inline-flex items-center text-primary text-sm">
-                    Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </a>
-                </CardFooter>
-              </Card>
-
-              {/* Startup 3 */}
-              <Card className="hover-card">
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between items-start">
-                    <CardTitle className="text-xl">IoT Innovate</CardTitle>
-                    <Badge>2016-2018</Badge>
-                  </div>
-                  <CardDescription>Technical Advisor</CardDescription>
-                </CardHeader>
-                <CardContent className="pb-2">
-                  <p>
-                    IoT solution for industrial environments that reduces energy consumption and maintenance costs through smart monitoring.
-                  </p>
-                </CardContent>
-                <CardFooter className="flex justify-between items-center pt-2">
-                  <div className="flex gap-2">
-                    <Badge variant="outline">IoT</Badge>
-                    <Badge variant="outline">Energy</Badge>
-                  </div>
-                  <a href="#" className="inline-flex items-center text-primary text-sm">
-                    Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </a>
-                </CardFooter>
-              </Card>
-            </div>
-          </TabsContent>
 
           {/* Research Section */}
           <TabsContent value="research" className="animate-slide-in">
@@ -201,6 +121,86 @@ const Innovation = () => {
                   This patent has been cited by over 20 subsequent patent applications and is currently being implemented in commercial applications.
                 </p>
               </div>
+            </div>
+          </TabsContent>
+
+          {/* Projects Section (previously Startups) */}
+          <TabsContent value="projects" className="animate-slide-in">
+            <div id="projects" className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Project 1 */}
+              <Card className="hover-card">
+                <CardHeader className="pb-2">
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="text-xl">AI Assistant Platform</CardTitle>
+                    <Badge>2019</Badge>
+                  </div>
+                  <CardDescription>Project Lead</CardDescription>
+                </CardHeader>
+                <CardContent className="pb-2">
+                  <p>
+                    Developed an AI-powered virtual assistant platform that provides personalized support for customer service across multiple industries.
+                  </p>
+                </CardContent>
+                <CardFooter className="flex justify-between items-center pt-2">
+                  <div className="flex gap-2">
+                    <Badge variant="outline">AI</Badge>
+                    <Badge variant="outline">NLP</Badge>
+                  </div>
+                  <a href="#" className="inline-flex items-center text-primary text-sm">
+                    Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
+                  </a>
+                </CardFooter>
+              </Card>
+
+              {/* Project 2 */}
+              <Card className="hover-card">
+                <CardHeader className="pb-2">
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="text-xl">Smart City Dashboard</CardTitle>
+                    <Badge>2018</Badge>
+                  </div>
+                  <CardDescription>Technical Architect</CardDescription>
+                </CardHeader>
+                <CardContent className="pb-2">
+                  <p>
+                    Designed and implemented a comprehensive smart city monitoring dashboard that integrates data from multiple IoT sources for real-time decision making.
+                  </p>
+                </CardContent>
+                <CardFooter className="flex justify-between items-center pt-2">
+                  <div className="flex gap-2">
+                    <Badge variant="outline">IoT</Badge>
+                    <Badge variant="outline">Data Visualization</Badge>
+                  </div>
+                  <a href="#" className="inline-flex items-center text-primary text-sm">
+                    Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
+                  </a>
+                </CardFooter>
+              </Card>
+
+              {/* Project 3 */}
+              <Card className="hover-card">
+                <CardHeader className="pb-2">
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="text-xl">FinTech Payment Solution</CardTitle>
+                    <Badge>2017</Badge>
+                  </div>
+                  <CardDescription>Solution Architect</CardDescription>
+                </CardHeader>
+                <CardContent className="pb-2">
+                  <p>
+                    Created a secure, scalable payment processing system that handles millions of transactions monthly with advanced fraud detection capabilities.
+                  </p>
+                </CardContent>
+                <CardFooter className="flex justify-between items-center pt-2">
+                  <div className="flex gap-2">
+                    <Badge variant="outline">FinTech</Badge>
+                    <Badge variant="outline">Security</Badge>
+                  </div>
+                  <a href="#" className="inline-flex items-center text-primary text-sm">
+                    Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
+                  </a>
+                </CardFooter>
+              </Card>
             </div>
           </TabsContent>
         </Tabs>

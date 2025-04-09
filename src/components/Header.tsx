@@ -53,22 +53,18 @@ const Header = () => {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
+                <NavigationMenuLink
+                  href="#startups"
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Startups
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              
+              <NavigationMenuItem>
                 <NavigationMenuTrigger>Innovation</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[200px]">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <a
-                          href="#startups"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                        >
-                          <div className="text-sm font-medium leading-none">Startups</div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            Entrepreneurial ventures
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
                     <li>
                       <NavigationMenuLink asChild>
                         <a
@@ -91,6 +87,19 @@ const Header = () => {
                           <div className="text-sm font-medium leading-none">Patent</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Intellectual property
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#projects"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Projects</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Technical projects
                           </p>
                         </a>
                       </NavigationMenuLink>
@@ -155,19 +164,22 @@ const Header = () => {
             <a href="#about" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               About
             </a>
+            <a href="#startups" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              Startups
+            </a>
             <div className="border-t border-gray-200 py-2">
               <p className="flex items-center text-sm font-medium text-gray-700 mb-2">
                 Innovation <ChevronDown className="ml-1 h-3 w-3" />
               </p>
               <div className="pl-4 flex flex-col space-y-2">
-                <a href="#startups" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
-                  Startups
-                </a>
                 <a href="#research" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Research
                 </a>
                 <a href="#patent" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Patent
+                </a>
+                <a href="#projects" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                  Projects
                 </a>
               </div>
             </div>
