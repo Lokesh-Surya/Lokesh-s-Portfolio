@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
@@ -23,10 +24,8 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background with gradient/image */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-slate-100 z-0">
-        <div className="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000&auto=format')] bg-cover bg-center"></div>
-      </div>
+      {/* Background with light gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-slate-50 to-indigo-50 z-0"></div>
       
       {/* Background gradient effects */}
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
@@ -35,12 +34,21 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center">
-          {/* "I'm Lokesh" text */}
-          <h2 className="text-2xl md:text-3xl font-medium mb-2 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            I'm <span className="text-gradient font-bold">Lokesh</span>
+          {/* Profile image placeholder */}
+          <div className="flex justify-center mb-6 animate-fade-in" style={{ animationDelay: "0.05s" }}>
+            <Avatar className="h-24 w-24 border-4 border-white shadow-lg">
+              <AvatarFallback className="text-3xl bg-gradient-to-br from-blue-400 to-primary text-white">
+                L
+              </AvatarFallback>
+            </Avatar>
+          </div>
+          
+          {/* "I'm Lokesh" text - now bigger */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            I'm <span className="text-gradient">Lokesh</span>
           </h2>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Digital Transformation <span className="text-gradient">Engineer</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
@@ -52,11 +60,6 @@ const Hero = () => {
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full">
               <a href="#about">Learn More</a>
-            </Button>
-            <Button asChild variant="secondary" size="lg" className="rounded-full">
-              <a href="/resume.pdf" download="Lokesh_Resume.pdf">
-                <Download className="mr-2 h-4 w-4" /> Download Resume
-              </a>
             </Button>
           </div>
         </div>
