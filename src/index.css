@@ -53,7 +53,7 @@
 
 @layer utilities {
   .section-padding {
-    @apply py-14 md:py-20;
+    @apply py-16 md:py-24;
   }
 
   .text-gradient {
@@ -61,7 +61,7 @@
   }
 
   .hover-card {
-    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
   
   .glass-effect {
@@ -84,37 +84,12 @@
   .card-hover {
     @apply transition-transform duration-300 hover:scale-[1.02];
   }
-
-  /* Modern design utilities with reduced intensity */
-  .modern-gradient-bg {
-    @apply bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600;
-  }
-
-  .glass-morphism {
-    @apply backdrop-blur-sm bg-white/80 border border-white/20 shadow-md;
-  }
-
-  .modern-card {
-    @apply rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-500;
-  }
-
-  .section-title-gradient {
-    @apply bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent;
-  }
-
-  .hover-scale {
-    @apply transition-transform duration-300 hover:scale-[1.03];
-  }
-
-  .border-gradient {
-    @apply border-2 border-transparent bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-border;
-  }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -124,46 +99,12 @@
 
 @keyframes scaleIn {
   from {
-    transform: scale(0.95);
+    transform: scale(0.9);
     opacity: 0;
   }
   to {
     transform: scale(1);
     opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideFromRight {
-  from {
-    transform: translateX(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
   }
 }
 
@@ -175,14 +116,3 @@
   animation: scaleIn 0.6s forwards ease-out;
 }
 
-.animate-slide-up {
-  animation: slideUp 0.7s forwards ease-out;
-}
-
-.animate-slide-right {
-  animation: slideFromRight 0.7s forwards ease-out;
-}
-
-.animate-pulse-glow {
-  animation: pulse 2s infinite;
-}
