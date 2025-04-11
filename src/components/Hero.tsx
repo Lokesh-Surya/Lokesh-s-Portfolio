@@ -83,10 +83,9 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Modern scroll indicator */}
+      {/* Modern scroll indicator - removed text, kept only arrow */}
       {showScrollIndicator && (
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <span className="text-sm text-gray-500 mb-2 font-medium">Discover More</span>
           <div className="h-12 w-12 rounded-full flex items-center justify-center border-2 border-blue-500/50">
             <ChevronDown className="h-6 w-6 text-blue-500" />
           </div>
