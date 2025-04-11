@@ -55,15 +55,15 @@ const Hero = () => {
           
           {/* "I'm Lokesh" text */}
           <div className="text-center">
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-3 animate-fade-in section-title-gradient" style={{ animationDelay: "0.1s" }}>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-3 animate-fade-in section-title-gradient" style={{ animationDelay: "0.1s" }}>
               I'm <span className="font-extrabold">Lokesh.</span>
             </h2>
             
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Digital Transformation <span className="section-title-gradient">Engineer</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <p className="text-xl md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.3s" }}>
               Innovating at the intersection of technology, business, and design to drive meaningful change and digital excellence.
             </p>
             
@@ -83,7 +83,7 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Modern scroll indicator - removed text, kept only arrow */}
+      {/* Modern scroll indicator - only arrow */}
       {showScrollIndicator && (
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
           <div className="h-12 w-12 rounded-full flex items-center justify-center border-2 border-blue-500/50">
