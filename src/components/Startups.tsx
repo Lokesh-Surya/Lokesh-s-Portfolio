@@ -29,20 +29,21 @@ const Startups = () => {
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover-card">
             <div className="grid md:grid-cols-2">
               <div className="p-8 md:p-10 flex flex-col justify-center">
-                <Badge className="w-fit mb-4">2020-Present</Badge>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">TechSynergy</h3>
+                <Badge className="w-fit mb-4">2023-Present</Badge>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Greenome | Founder & CTO</h3>
                 <p className="text-gray-600 mb-6">
-                  As Founder & CTO, I lead the development of an AI-powered platform that revolutionizes 
-                  enterprise workflows through predictive analytics and automated decision-making processes, 
-                  helping organizations achieve operational excellence.
+                Greenome is a climate tech platform designed to build carbon-aware global citizens. It drives environmental consciousness through carbon footprint analysis, sustainability education, and gamified learning experiences that promote eco-friendly habits and informed decision-making.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <Badge variant="outline">Artificial Intelligence</Badge>
-                  <Badge variant="outline">SaaS Platform</Badge>
-                  <Badge variant="outline">Enterprise Solutions</Badge>
+                  <Badge variant="outline">Green Technology</Badge>
+                  <Badge variant="outline">Carbon Offset</Badge>
+                  <Badge variant="outline">Sustainability Education</Badge>
                 </div>
                 <Button asChild variant="outline" size="sm" className="w-fit">
-                  <a href="#" className="inline-flex items-center">
+                  <a href="https://www.greenome.in/"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center">
                     Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
                   </a>
                 </Button>

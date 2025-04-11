@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import {
+  AvatarImage
+} from "@/components/ui/avatar"
 
 const Hero = () => {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
@@ -37,6 +40,11 @@ const Hero = () => {
           {/* Profile image placeholder - larger size */}
           <div className="flex justify-center mb-8 animate-fade-in" style={{ animationDelay: "0.05s" }}>
             <Avatar className="h-40 w-40 border-4 border-white shadow-lg">
+              <AvatarImage
+                src="/IMG_9914.jpg"
+                alt="Lokesh"
+                className="object-cover"
+              />
               <AvatarFallback className="text-5xl bg-gradient-to-br from-blue-400 to-primary text-white">
                 L
               </AvatarFallback>
@@ -56,7 +64,10 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button asChild size="lg" className="rounded-full">
-              <a href="#contact">Get in Touch <ArrowRight className="ml-2 h-4 w-4" /></a>
+              <a href="https://www.linkedin.com/in/connectwithlokesh/"
+              target="_blank" 
+              rel="noopener noreferrer"
+              >Connect<ArrowRight className="ml-2 h-4 w-4" /></a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full">
               <a href="#about">Learn More</a>

@@ -41,9 +41,11 @@ const About = () => {
               {/* Placeholder for profile image */}
               <div className="w-full h-full relative">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="w-32 h-32 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
+                  <img
+                    src="/public/IMG_9915.jpg" // or wherever your image is placed
+                    alt="Lokesh"
+                    className="object-cover w-full h-full"
+                  />
                 </div>
                 <div className="absolute bottom-4 right-4 bg-white/30 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-medium">
                   Lokesh
@@ -55,28 +57,43 @@ const About = () => {
           </div>
           
           <div className="space-y-6 order-1 md:order-2">
+            <p></p>
             <h3 className="text-2xl font-bold">Digital Transformation Engineer</h3>
             <div className="space-y-4">
-              <p className="text-lg">
-                With over 10 years of experience in digital transformation, I help organizations navigate the complex landscape of technology adoption and business process optimization.
+              <p>
+              With over 3.5 years of experience leading innovation at the intersection of engineering and digital technology, I specialize in helping organizations in energy, oil & gas, and chemical industries evolve into intelligent, data-driven operations.
               </p>
               <p>
-                My expertise spans across enterprise architecture, change management, and innovation strategy. I combine technical knowledge with a deep understanding of business operations to deliver solutions that drive growth and efficiency.
+              My journey began in mechanical engineering, but my passion for solving complex industrial challenges using smart systems led me to the world of digital transformation. From developing Digital Twins to architecting predictive maintenance workflows and asset integrity frameworks, I blend technical expertise with strategic vision to drive measurable impact.
               </p>
               <p>
-                I am passionate about emerging technologies like AI, IoT, and blockchain, and how they can be leveraged to create sustainable competitive advantages for organizations.
+              I’ve worked with some of the world’s leading oil & gas, energy, and chemical majors - spearheading multi-site asset integrity projects, automating legacy data migration, and crafting AR-powered dashboards that enhance real-time decision-making on the ground.
+              </p>
+              <p>
+              I'm deeply passionate about exploring how emerging technologies like AI, ML, and Blockchain can be harnessed to create smarter, safer, and more sustainable industrial ecosystems.
+              </p>
+              <p>
+              I believe digital transformation isn't just about implementing technology - it's about reimagining workflows, empowering people, and building a culture of continuous improvement.
               </p>
             </div>
             
             <Card className="p-6 bg-blue-50 border-none">
               <p className="italic">
-                "Digital transformation is not just about technology—it's about people, processes, and creating a culture of continuous innovation."
+              "True transformation starts when technology, people, and process converge with purpose."
               </p>
             </Card>
             
-            <Button className="mt-4 rounded-full" size="lg">
-              Download Resume <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <a 
+              href="https://docs.google.com/document/d/1QTISbXtpqeexV_zfbLG5H_rfQ8hsbpLook7a1ocdE9U/edit?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="mt-4 rounded-full" size="lg">
+                Download Resume
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+
           </div>
         </div>
       </div>
