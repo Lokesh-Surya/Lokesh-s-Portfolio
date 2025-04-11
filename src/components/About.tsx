@@ -42,7 +42,7 @@ const About = () => {
               <div className="w-full h-full relative">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <img
-                    src="/public/IMG_9915.jpg" // or wherever your image is placed
+                    src="/IMG_9915.jpg" // or wherever your image is placed
                     alt="Lokesh"
                     className="object-cover w-full h-full"
                   />
