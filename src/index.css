@@ -84,6 +84,31 @@
   .card-hover {
     @apply transition-transform duration-300 hover:scale-[1.02];
   }
+
+  /* New modern design utilities */
+  .modern-gradient-bg {
+    @apply bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-600;
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/90 border border-white/20 shadow-lg;
+  }
+
+  .modern-card {
+    @apply rounded-2xl overflow-hidden bg-white shadow-xl hover:shadow-2xl transition-all duration-500;
+  }
+
+  .section-title-gradient {
+    @apply bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .border-gradient {
+    @apply border-2 border-transparent bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-border;
+  }
 }
 
 @keyframes fadeIn {
@@ -108,11 +133,57 @@
   }
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s forwards ease-out;
 }
 
 .animate-scale-in {
   animation: scaleIn 0.6s forwards ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.7s forwards ease-out;
+}
+
+.animate-slide-right {
+  animation: slideFromRight 0.7s forwards ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse 2s infinite;
 }
 

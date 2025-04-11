@@ -1,9 +1,17 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { 
+  NavigationMenu, 
+  NavigationMenuContent, 
+  NavigationMenuItem, 
+  NavigationMenuLink, 
+  NavigationMenuList, 
+  NavigationMenuTrigger, 
+  navigationMenuTriggerStyle 
+} from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const Header = () => {
@@ -26,26 +34,31 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 shadow-md backdrop-blur-md' : 'bg-white'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? 'glass-morphism backdrop-blur-xl py-3' : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <a href="#hero" className="text-xl font-bold flex items-center gap-2">
-            <Avatar className="h-8 w-8 bg-gradient-to-br from-primary/80 to-blue-400/80">
-              <AvatarFallback className="text-white">L</AvatarFallback>
-            </Avatar>
-            <span className="h-2 w-2 rounded-full bg-primary"></span>
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between">
+          <a href="#hero" className="text-xl font-bold flex items-center gap-3">
+            <div className="relative">
+              <div className={`absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 blur-sm ${isScrolled ? 'animate-pulse' : ''}`}></div>
+              <Avatar className="h-10 w-10 bg-gradient-to-br from-blue-600 to-indigo-600 border-2 border-white">
+                <AvatarFallback className="text-white font-bold">L</AvatarFallback>
+              </Avatar>
+            </div>
+            <span className={`font-extrabold text-2xl transition-all ${isScrolled ? 'text-gray-800' : 'text-gray-800'}`}>
+              Lokesh
+            </span>
           </a>
           
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
-            <NavigationMenuList>
+            <NavigationMenuList className="gap-1">
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#about"
-                  className={navigationMenuTriggerStyle()}
+                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-gray-800 font-medium")}
                 >
                   About
                 </NavigationMenuLink>
@@ -54,24 +67,26 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#startups"
-                  className={navigationMenuTriggerStyle()}
+                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-gray-800 font-medium")}
                 >
                   Startups
                 </NavigationMenuLink>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Innovation</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-white/10 text-gray-800 font-medium">
+                  Innovation
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-4 w-[200px]">
+                  <ul className="grid gap-3 p-6 w-[300px] glass-morphism rounded-xl">
                     <li>
                       <NavigationMenuLink asChild>
                         <a
                           href="#research"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-blue-50"
                         >
-                          <div className="text-sm font-medium leading-none">Research</div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          <div className="text-lg font-medium leading-none mb-1 text-blue-600">Research</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-gray-600">
                             Academic publications
                           </p>
                         </a>
@@ -81,10 +96,10 @@ const Header = () => {
                       <NavigationMenuLink asChild>
                         <a
                           href="#patent"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-blue-50"
                         >
-                          <div className="text-sm font-medium leading-none">Patent</div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          <div className="text-lg font-medium leading-none mb-1 text-indigo-600">Patent</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-gray-600">
                             Intellectual property
                           </p>
                         </a>
@@ -94,10 +109,10 @@ const Header = () => {
                       <NavigationMenuLink asChild>
                         <a
                           href="#projects"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          className="block select-none space-y-1 rounded-lg p-4 leading-none no-underline outline-none transition-colors hover:bg-blue-50"
                         >
-                          <div className="text-sm font-medium leading-none">Projects</div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          <div className="text-lg font-medium leading-none mb-1 text-purple-600">Projects</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-gray-600">
                             Technical projects
                           </p>
                         </a>
@@ -110,7 +125,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#certifications"
-                  className={navigationMenuTriggerStyle()}
+                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-gray-800 font-medium")}
                 >
                   Certifications
                 </NavigationMenuLink>
@@ -119,7 +134,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#skills"
-                  className={navigationMenuTriggerStyle()}
+                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-gray-800 font-medium")}
                 >
                   Skills
                 </NavigationMenuLink>
@@ -128,7 +143,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#testimonials"
-                  className={navigationMenuTriggerStyle()}
+                  className={cn(navigationMenuTriggerStyle(), "bg-transparent hover:bg-white/10 text-gray-800 font-medium")}
                 >
                   Testimonials
                 </NavigationMenuLink>
@@ -138,65 +153,67 @@ const Header = () => {
           
           {/* Contact Button */}
           <div className="hidden md:block">
-            <Button asChild size="sm" className="rounded-full bg-primary/90 hover:bg-primary">
+            <Button asChild size="sm" className="rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:shadow-lg hover:shadow-blue-500/20 transition-all text-white">
               <a href="#contact">Contact Me</a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-700 hover:text-primary"
+            className="md:hidden text-gray-800 hover:text-primary"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-            </svg>
+            {mobileMenuOpen ? (
+              <X className="h-7 w-7" />
+            ) : (
+              <Menu className="h-7 w-7" />
+            )}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="container py-4 px-4 flex flex-col space-y-4">
-            <a href="#about" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+        <div className="md:hidden glass-morphism backdrop-blur-xl shadow-2xl">
+          <div className="container py-6 px-6 flex flex-col space-y-6">
+            <a href="#about" className="text-lg font-medium py-3 text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
               About
             </a>
-            <a href="#startups" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#startups" className="text-lg font-medium py-3 text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Startups
             </a>
-            <div className="border-t border-gray-200 py-2">
-              <p className="flex items-center text-sm font-medium text-gray-700 mb-2">
-                Innovation <ChevronDown className="ml-1 h-3 w-3" />
+            <div className="border-t border-gray-200 py-3">
+              <p className="flex items-center text-lg font-medium text-gray-700 mb-3">
+                Innovation <ChevronDown className="ml-2 h-4 w-4" />
               </p>
-              <div className="pl-4 flex flex-col space-y-2">
-                <a href="#research" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              <div className="pl-4 flex flex-col space-y-3">
+                <a href="#research" className="text-base text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Research
                 </a>
-                <a href="#patent" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                <a href="#patent" className="text-base text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Patent
                 </a>
-                <a href="#projects" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                <a href="#projects" className="text-base text-gray-700 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
                   Projects
                 </a>
               </div>
             </div>
-            <a href="#certifications" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#certifications" className="text-lg font-medium py-3 text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Certifications
             </a>
-            <a href="#skills" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#skills" className="text-lg font-medium py-3 text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Skills
             </a>
-            <a href="#testimonials" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#testimonials" className="text-lg font-medium py-3 text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Testimonials
             </a>
-            <a href="#contact" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+            <a href="#contact" className="text-lg font-medium py-3 text-gray-800 hover:text-blue-600 transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Contact
             </a>
             
-            <Button className="mt-2 rounded-full" size="sm">
-              <a href="#contact">Contact Me</a>
+            <Button asChild className="mt-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600">
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact Me</a>
             </Button>
           </div>
         </div>

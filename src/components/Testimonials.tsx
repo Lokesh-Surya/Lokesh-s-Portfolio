@@ -122,27 +122,31 @@ const Testimonials = () => {
     };
   }, []);
 
-  // Generate initials for avatar
-  const getInitials = (name: string) => {
-    return name.split(' ').map(word => word[0]).join('');
-  };
-
   return (
-    <section id="testimonials" ref={sectionRef} className="section-padding bg-gradient-to-b from-gray-50 to-white opacity-0">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Client Testimonials
+    <section id="testimonials" ref={sectionRef} className="py-24 md:py-32 relative overflow-hidden opacity-0">
+      {/* Modern background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/50 via-white to-blue-50/50"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute -top-20 -left-20 w-[500px] h-[500px] bg-indigo-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-blue-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-1/4 w-40 h-40 bg-purple-200/30 rounded-full blur-2xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-20">
+          <span className="inline-block py-1 px-3 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-3">Testimonials</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 section-title-gradient">
+            Client Feedback
           </h2>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
-          <p className="text-gray-600 mt-6 max-w-xl mx-auto text-lg">
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full mb-6"></div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Hear from industry leaders about their experiences working with me on digital transformation initiatives.
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
           <div 
-            className="relative overflow-hidden rounded-2xl"
+            className="relative overflow-hidden rounded-3xl"
             ref={el => cardRefs.current[0] = el}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
@@ -155,33 +159,39 @@ const Testimonials = () => {
               {testimonials.map((testimonial) => (
                 <Card 
                   key={testimonial.id} 
-                  className="min-w-full border-none shadow-xl bg-gradient-to-br from-white to-blue-50"
+                  className="min-w-full glass-morphism border-none shadow-2xl"
                 >
+                  <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-gradient-to-br from-blue-400/10 to-indigo-400/10 blur-2xl"></div>
+                  <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full bg-gradient-to-br from-indigo-400/10 to-purple-400/10 blur-2xl"></div>
+                  
                   <div className="absolute top-6 right-6">
-                    <Quote className="h-20 w-20 text-blue-100 rotate-180" />
+                    <Quote className="h-24 w-24 text-indigo-100 rotate-180" />
                   </div>
                   
-                  <CardContent className="pt-10 pb-6 px-8">
-                    <div className="flex mb-6">
+                  <CardContent className="pt-14 pb-8 px-10">
+                    <div className="flex mb-8">
                       {Array.from({ length: testimonial.rating }).map((_, i) => (
-                        <Star key={i} className="h-6 w-6 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="h-7 w-7 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
-                    <p className="text-xl md:text-2xl leading-relaxed font-medium text-gray-700 mb-8 relative z-10">
+                    <p className="text-2xl md:text-3xl leading-relaxed font-medium text-gray-800 mb-10 relative z-10">
                       "{testimonial.content}"
                     </p>
                   </CardContent>
                   
-                  <CardFooter className="px-8 pb-10 flex items-center gap-4">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 h-14 w-14 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                  <CardFooter className="px-10 pb-14 flex items-center gap-6">
+                    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 h-16 w-16 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg">
                       {testimonial.avatar}
                     </div>
                     <div>
-                      <p className="font-bold text-xl">{testimonial.name}</p>
+                      <p className="font-bold text-2xl">{testimonial.name}</p>
                       <div className="flex flex-wrap items-center gap-2 mt-1">
-                        <span className="text-gray-700">{testimonial.position}</span>
+                        <span className="text-gray-700 text-lg">{testimonial.position}</span>
                         <span className="text-gray-400 hidden md:inline">•</span>
-                        <Badge variant="outline" className="bg-white shadow-sm">
+                        <Badge 
+                          variant="outline"
+                          className="bg-white/80 backdrop-blur-sm border-indigo-200 text-indigo-700 px-3 py-1 text-sm"
+                        >
                           {testimonial.company}
                         </Badge>
                       </div>
@@ -196,33 +206,33 @@ const Testimonials = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full bg-white shadow-md border-none hover:bg-blue-50 transition-all"
+                className="rounded-full glass-morphism shadow-lg border-none hover:bg-blue-50 transition-all h-14 w-14"
                 onClick={handlePrevious}
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-7 w-7 text-indigo-600" />
               </Button>
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full bg-white shadow-md border-none hover:bg-blue-50 transition-all"
+                className="rounded-full glass-morphism shadow-lg border-none hover:bg-blue-50 transition-all h-14 w-14"
                 onClick={handleNext}
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-7 w-7 text-indigo-600" />
               </Button>
             </div>
           </div>
           
-          {/* Indicators */}
+          {/* Modern indicators */}
           <div 
-            className="flex justify-center mt-8 gap-3"
+            className="flex justify-center mt-10 gap-4"
             ref={el => cardRefs.current[1] = el}
           >
             {testimonials.map((_, index) => (
               <button
                 key={index}
-                className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                className={`w-12 h-3 rounded-full transition-all duration-300 ${
                   activeIndex === index ? 
-                  'bg-gradient-to-r from-blue-500 to-purple-500 shadow-md scale-110' : 
+                  'bg-gradient-to-r from-blue-500 to-indigo-500 shadow-md scale-110' : 
                   'bg-gray-300 hover:bg-gray-400'
                 }`}
                 onClick={() => setActiveIndex(index)}
