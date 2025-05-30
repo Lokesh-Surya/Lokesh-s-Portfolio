@@ -59,9 +59,11 @@ const Innovation = () => {
                   <div className="md:w-1/3 bg-blue-50 flex items-center justify-center p-8">
                     <div className="text-center">
                       <Badge className="mb-2">Published 2020</Badge>
-                      <h3 className="text-xl font-semibold">International Journal of AI Applications</h3>
+                      <h3 className="text-xl font-semibold">Indian Engineering Congress</h3>
                       <a 
-                        href="#" 
+                        href="https://www.ieindia.org/webui/ajax/Downloads/WebUI_PDF/IEC/IEC_35.pdf"
+                        target="_blank" 
+                        rel="noopener noreferrer" 
                         className="inline-flex items-center text-primary text-sm mt-3 hover:underline"
                       >
                         Read Paper <ExternalLink className="ml-1 h-4 w-4" />
@@ -70,14 +72,14 @@ const Innovation = () => {
                   </div>
                   <div className="p-8 md:w-2/3">
                     <div className="uppercase tracking-wide text-sm text-primary font-semibold">Research Paper</div>
-                    <h3 className="block mt-1 text-lg font-medium">AI-Driven Decision Support Systems for Strategic Business Transformation</h3>
+                    <h3 className="block mt-1 text-lg font-medium">Aerodynamic Characteristics of grooved rotating circular cylinder</h3>
                     <p className="mt-2 text-gray-600">
-                      This study examines the implementation of AI-based decision support systems in strategic business transformation initiatives, with a focus on measuring ROI and organizational impact.
+                      This research explores the aerodynamic effects of grooves on a rotating circular cylinder in uniform flow, revealing significant drag reduction and lift enhancement across varying groove and spin ratios through numerical simulations.
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      <Badge variant="outline">Artificial Intelligence</Badge>
-                      <Badge variant="outline">Decision Support</Badge>
-                      <Badge variant="outline">ROI Measurement</Badge>
+                      <Badge variant="outline">Performance Improvement</Badge>
+                      <Badge variant="outline">Drag Reduction</Badge>
+                      <Badge variant="outline">Lift Enhancement</Badge>
                     </div>
                   </div>
                 </div>
