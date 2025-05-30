@@ -11,24 +11,32 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Lokesh</h3>
+            <h3 className="text-2xl font-bold mb-4">Lokesh Umapathi</h3>
             <p className="text-gray-400 mb-4">
-              Empowering organizations through strategic digital transformation and innovative solutions.
+              Harnessing creativity and technology to reshape the future of business and design.
             </p>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
-                <Mail className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
-                <Linkedin className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
-                <Github className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
-                <Twitter className="h-5 w-5" />
-              </Button>
-            </div>
+  <a href="mailto:work.lokeshumapathi@gmail.com" target="_blank" rel="noopener noreferrer">
+    <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
+      <Mail className="h-5 w-5" />
+    </Button>
+  </a>
+  <a href="http://linkedin.com/in/connectwithlokesh/" target="_blank" rel="noopener noreferrer">
+    <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
+      <Linkedin className="h-5 w-5" />
+    </Button>
+  </a>
+  {/* <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+    <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
+      <Github className="h-5 w-5" />
+    </Button>
+  </a>
+  <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
+    <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/20 hover:text-primary">
+      <Twitter className="h-5 w-5" />
+    </Button>
+  </a> */}
+</div>
           </div>
           
           {/* Quick Links */}
@@ -62,12 +70,12 @@ const Footer = () => {
             <address className="not-italic text-gray-400">
               <p className="mb-2 flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                San Francisco, CA
+                Dubai, UAE
               </p>
-              <p className="mb-2">lokesh@example.com</p>
+              <p className="mb-2">work.lokeshumapathi@gmail.com</p>
               <p className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                +1 (555) 123-4567
+                +971 54 363 9221 / +91 98436 19827
               </p>
             </address>
           </div>
