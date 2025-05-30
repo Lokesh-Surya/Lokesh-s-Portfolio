@@ -37,30 +37,30 @@ const About = () => {
         
         <div className="space-y-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 transform hover:-translate-y-1 transition-transform duration-300">
-            <h3 className="text-2xl font-bold text-gradient mb-6">Digital Transformation Engineer</h3>
+            <h3 className="text-2xl font-bold text-gradient mb-6">Lokesh Umapathi</h3>
             
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
-                I drive <span className="font-semibold text-primary">innovation and operational excellence</span> across North America, Europe, and India by partnering with leading global energy, oil & gas, and chemical companies to deliver complex, multi-site digital transformation projects that enable intelligent, data-driven operations.
+                I am a Digital Transformation Engineer with extensive experience working with leading global  <span className="font-semibold text-primary">energy, oil & gas, and chemical companies</span> across North America, Europe, and India to spearhead multi-site digital initiatives that enhance operational resilience and asset performance.
               </p>
               
               <div className="border-l-4 border-primary pl-6 py-2">
                 <p className="text-lg">
-                  Leveraging a strong foundation in engineering and digital technology, I lead cross-functional teams to solve complex industrial challenges through smart, scalable solutions that improve asset integrity, safety, and operational efficiency.
+                  Leveraging a strong foundation in engineering and digital technology, I lead cross-functional teams to solve complex industrial challenges through smart, scalable solutions that improve <span className="font-semibold">asset integrity, safety, and operational efficiency.</span>
                 </p>
               </div>
               
               <p className="text-lg leading-relaxed">
-                From developing <span className="font-semibold">strategic vision with hands-on execution</span> to architecting <span className="font-semibold">predictive maintenance workflows</span> and asset integrity frameworks, I blend technical expertise with strategic vision to drive measurable impact.
+                I combine <span className="font-semibold">strategic vision with hands-on execution</span> to ensure projects are aligned with <span className="font-semibold">business objectives, regulatory standards</span>, and stakeholder requirements, fostering sustainable and measurable impact.
               </p>
               
               <p className="text-lg leading-relaxed">
-                I've worked with some of the world's leading oil & gas, energy, and chemical majors - spearheading multi-site asset integrity projects, automating legacy data migration, and crafting AR-powered dashboards that enhance real-time decision-making on the ground.
+                Passionate about emerging technologies, I champion the adoption of AI, Machine Learning, and automation to drive <span className="font-semibold">predictive maintenance, digital twins</span>, and other advanced frameworks that enhance real-time decision-making.
               </p>
               
               <div className="flex items-center space-x-3 pl-4 border-l-4 border-blue-300">
                 <p className="text-lg font-medium">
-                  I'm deeply passionate about exploring how emerging technologies like <span className="text-primary font-semibold">AI, ML, and Blockchain</span> can be harnessed to create smarter, safer, and more sustainable industrial ecosystems.
+                  I'm deeply passionate about exploring how emerging technologies like <span className="text-primary font-semibold">AI, ML, and Blockchain</span>I excel at coordinating resources, mitigating risks, and managing timelines and budgets to deliver projects on time and within scope, while maintaining high-quality standards.
                 </p>
               </div>
               
