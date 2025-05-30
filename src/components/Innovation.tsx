@@ -105,7 +105,7 @@ const Innovation = () => {
                 
                 <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
                   <img 
-                    src="/images/Isometric View.JPG" 
+                    src="/Isometric View.JPG" 
                     alt="Patent Diagram 1" 
                     className="object-contain w-full h-full"
                   />
