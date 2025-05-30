@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Github, Twitter, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -39,9 +39,6 @@ const Footer = () => {
                 <a href="#about" className="text-gray-400 hover:text-primary transition-colors">About Me</a>
               </li>
               <li>
-                <a href="#startups" className="text-gray-400 hover:text-primary transition-colors">Startups</a>
-              </li>
-              <li>
                 <a href="#research" className="text-gray-400 hover:text-primary transition-colors">Research</a>
               </li>
               <li>
@@ -63,9 +60,15 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <address className="not-italic text-gray-400">
-              <p className="mb-2">San Francisco, CA</p>
+              <p className="mb-2 flex items-center">
+                <MapPin className="h-4 w-4 mr-2" />
+                San Francisco, CA
+              </p>
               <p className="mb-2">lokesh@example.com</p>
-              <p>+1 (555) 123-4567</p>
+              <p className="flex items-center">
+                <Phone className="h-4 w-4 mr-2" />
+                +1 (555) 123-4567
+              </p>
             </address>
           </div>
         </div>
