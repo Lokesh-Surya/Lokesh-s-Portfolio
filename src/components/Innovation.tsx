@@ -96,20 +96,21 @@ const Innovation = () => {
                     <Badge className="mb-2">Filed 2021 • Granted 2022</Badge>
                     <h3 className="text-2xl font-bold">Vertical Axis Wind Turbine</h3>
                   </div>
-                  <Badge variant="secondary" className="text-lg">US 10,984,469</Badge>
+                  <Badge variant="secondary" className="text-lg">Design No: 343102-001</Badge>
                 </div>
                 
                 <p className="text-gray-600 mb-8">
                   Design patent for an innovative vertical axis wind turbine featuring leading-edge protuberances to enhance aerodynamic performance and improve energy capture efficiency.
                 </p>
                 
-                <div className="grid md:grid-cols-3 gap-6 mb-8">
-                  {/* Patent Diagram 1 */}
-                  <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
-                    <svg className="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-                    </svg>
-                  </div>
+                <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+                  <img 
+                    src="/images/Isometric View.JPG" 
+                    alt="Patent Diagram 1" 
+                    className="object-contain w-full h-full"
+                  />
+                </div>
+
                   
                   {/* Patent Diagram 2 */}
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
