@@ -103,14 +103,14 @@ const Innovation = () => {
                   Design patent for an innovative vertical axis wind turbine featuring leading-edge protuberances to enhance aerodynamic performance and improve energy capture efficiency.
                 </p>
                 
-                <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  {/* Patent Diagram 1 */}
                   <img 
                     src="/Isometric View.JPG" 
                     alt="Patent Diagram 1" 
                     className="object-contain w-full h-full"
                   />
-                </div>
-
+                  </div>
                   
                   {/* Patent Diagram 2 */}
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
