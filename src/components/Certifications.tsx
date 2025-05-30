@@ -9,12 +9,12 @@ const Certifications = () => {
   
   const certifications = [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-123456",
-      skills: ["Cloud Architecture", "AWS", "Infrastructure"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=80&h=80&fit=crop"
+      name: "Project Managment Professional (PMP)",
+      issuer: "Project Managment Institute (PMI)",
+      date: "2025",
+      credentialId: "4113366",
+      skills: ["Communication Management", "Risk Management", "Quality Management"],
+      image: "/blob.png"
     },
     {
       name: "Microsoft Certified: Azure Solutions Architect Expert",
