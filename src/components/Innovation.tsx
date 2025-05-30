@@ -128,10 +128,10 @@ const Innovation = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <Badge variant="outline">Blockchain</Badge>
-                  <Badge variant="outline">Digital Identity</Badge>
-                  <Badge variant="outline">Privacy</Badge>
-                  <Badge variant="outline">Security</Badge>
+                  <Badge variant="outline">Renewable Energy</Badge>
+                  <Badge variant="outline">Sustainability Design</Badge>
+                  <Badge variant="outline">Vertical Axis Wind Turbine</Badge>
+                  <Badge variant="outline">Leading Edge Protuberance</Badge>
                 </div>
                 
                 <div className="flex justify-between items-center">
