@@ -107,7 +107,7 @@ const Innovation = () => {
                   {/* Patent Diagram 1 */}
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
                     <img 
-                      src="/isometric-view.jpg" 
+                      src="/isometric-view1.jpg" 
                       alt="Patent Diagram 1" 
                       className="object-contain w-full h-full"
                     />
@@ -116,7 +116,7 @@ const Innovation = () => {
                   {/* Patent Diagram 2 */}
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
                     <img 
-                      src="/top-view.jpg" 
+                      src="/top-view1.jpg" 
                       alt="Patent Diagram 2" 
                       className="object-contain w-full h-full"
                     />
@@ -125,7 +125,7 @@ const Innovation = () => {
                   {/* Patent Diagram 3 */}
                   <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center">
                     <img 
-                      src="/front-view.jpg" 
+                      src="/front-view1.jpg" 
                       alt="Patent Diagram 3" 
                       className="object-contain w-full h-full"
                     />
