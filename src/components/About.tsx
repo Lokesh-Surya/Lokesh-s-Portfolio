@@ -51,7 +51,7 @@ const About = () => {
               </div>
               
               <p className="text-lg leading-relaxed">
-                From developing <span className="font-semibold">Digital Twins</span> to architecting <span className="font-semibold">predictive maintenance workflows</span> and asset integrity frameworks, I blend technical expertise with strategic vision to drive measurable impact.
+                From developing <span className="font-semibold">strategic vision with hands-on execution</span> to architecting <span className="font-semibold">predictive maintenance workflows</span> and asset integrity frameworks, I blend technical expertise with strategic vision to drive measurable impact.
               </p>
               
               <p className="text-lg leading-relaxed">
