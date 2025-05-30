@@ -13,7 +13,7 @@ const Certifications = () => {
       issuer: "Project Managment Institute (PMI)",
       date: "2025",
       credentialId: "4113366",
-      skills: ["Communication Management", "Risk Management", "Quality Management", "Scope Management"],
+      skills: ["Project Management","Predictive", "Agile", "Hybrid"],
       image: "/blob.png"
     },
     {
@@ -21,7 +21,7 @@ const Certifications = () => {
       issuer: "Society for Maintenance & Reliability Professionals (SMRP)",
       date: "2025",
       credentialId: "13362",
-      skills: ["CMMs", "Business Management", "Organization & Leadership", "Manufacturing Process Reliability"],
+      skills: ["CMMS", "Business Management", "Organization & Leadership", "Manufacturing Process Reliability"],
       image: "/CMRP.png"
     },
     {
