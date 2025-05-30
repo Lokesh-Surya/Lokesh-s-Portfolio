@@ -175,8 +175,8 @@ const Innovation = () => {
                 </CardContent>
                 <CardFooter className="flex justify-between items-center pt-2">
                   <div className="flex gap-2">
-                    <Badge variant="outline">AI</Badge>
-                    <Badge variant="outline">NLP</Badge>
+                    <Badge variant="outline">Automated Scheduling</Badge>
+                    <Badge variant="outline">Risk Prediction</Badge>
                   </div>
                   {/* <a href="#" className="inline-flex items-center text-primary text-sm">
                     Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
@@ -200,8 +200,8 @@ const Innovation = () => {
                 </CardContent>
                 <CardFooter className="flex justify-between items-center pt-2">
                   <div className="flex gap-2">
-                    <Badge variant="outline">IoT</Badge>
-                    <Badge variant="outline">Data Visualization</Badge>
+                    <Badge variant="outline">KPI Visualization</Badge>
+                    <Badge variant="outline">Early Issue Detection</Badge>
                   </div>
                   {/* <a href="#" className="inline-flex items-center text-primary text-sm">
                     Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
@@ -225,8 +225,8 @@ const Innovation = () => {
                 </CardContent>
                 <CardFooter className="flex justify-between items-center pt-2">
                   <div className="flex gap-2">
-                    <Badge variant="outline">FinTech</Badge>
-                    <Badge variant="outline">Security</Badge>
+                    <Badge variant="outline">Optimized Staffing</Badge>
+                    <Badge variant="outline">Resource Forecasting</Badge>
                   </div>
                   {/* <a href="#" className="inline-flex items-center text-primary text-sm">
                     Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
