@@ -42,12 +42,12 @@ const Innovation = () => {
                     <div className="uppercase tracking-wide text-sm text-primary font-semibold">Research Paper</div>
                     <h3 className="block mt-1 text-lg font-medium">Effect of solidity on the dynamic behaviour of the Darrieus turbine with leading-edge protuberance</h3>
                     <p className="mt-2 text-gray-600">
-                      This research explores how organizations can develop integrated frameworks for digital transformation that enhance operational agility while maintaining strategic alignment.
+                      This research explores the dynamic behavior of straight-type Darrieus turbines with leading-edge protuberance under varying solidity and tip speed ratios, identifying optimal blade configurations to mitigate vortex-induced and buffeting vibrations.
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      <Badge variant="outline">Digital Strategy</Badge>
-                      <Badge variant="outline">Enterprise Architecture</Badge>
-                      <Badge variant="outline">Organizational Change</Badge>
+                      <Badge variant="outline">Sustainable Technology</Badge>
+                      <Badge variant="outline">Wind Energy</Badge>
+                      <Badge variant="outline">Vertical Axis Wind Turbine</Badge>
                     </div>
                   </div>
                 </div>
