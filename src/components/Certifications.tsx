@@ -28,7 +28,7 @@ const Certifications = () => {
       name: "Six Sigma Green Belt Specialization",
       issuer: "Kennesaw State University, Coursera",
       date: "2024",
-      //credentialId: "CSM-345678",
+      credentialId: "NIL",
       skills: ["Team Management","Quality Improvement", "Process Capability", "Process Improvement"],
       image: "/Green-Belt.png"
     },
