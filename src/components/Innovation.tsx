@@ -72,7 +72,7 @@ const Innovation = () => {
                   </div>
                   <div className="p-8 md:w-2/3">
                     <div className="uppercase tracking-wide text-sm text-primary font-semibold">Research Paper</div>
-                    <h3 className="block mt-1 text-lg font-medium">Aerodynamic Characteristics of grooved rotating circular cylinder</h3>
+                    <h3 className="block mt-1 text-lg font-medium">Aerodynamic characteristics of grooved rotating circular cylinder</h3>
                     <p className="mt-2 text-gray-600">
                       This research explores the aerodynamic effects of grooves on a rotating circular cylinder in uniform flow, revealing significant drag reduction and lift enhancement across varying groove and spin ratios through numerical simulations.
                     </p>
@@ -93,14 +93,14 @@ const Innovation = () => {
               <div className="p-8">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <Badge className="mb-2">Filed 2019 • Granted 2021</Badge>
-                    <h3 className="text-2xl font-bold">Distributed Ledger System for Digital Identity Verification</h3>
+                    <Badge className="mb-2">Filed 2021 • Granted 2022</Badge>
+                    <h3 className="text-2xl font-bold">Vertical Axis Wind Turbine</h3>
                   </div>
                   <Badge variant="secondary" className="text-lg">US 10,984,469</Badge>
                 </div>
                 
                 <p className="text-gray-600 mb-8">
-                  A system and method for secure digital identity verification using distributed ledger technology. The invention provides a tamper-proof and privacy-preserving framework for managing digital identities across multiple platforms and applications.
+                  Design patent for an innovative vertical axis wind turbine featuring leading-edge protuberances to enhance aerodynamic performance and improve energy capture efficiency.
                 </p>
                 
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
