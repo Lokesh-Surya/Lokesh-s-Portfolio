@@ -81,7 +81,7 @@ const About = () => {
           
           <div className="flex justify-center mt-8">
             <a 
-              href="https://docs.google.com/document/d/1QTISbXtpqeexV_zfbLG5H_rfQ8hsbpLook7a1ocdE9U/edit?usp=sharing" 
+              href="https://drive.google.com/file/d/1rEhdiNBV1QF8XhHnWdHUm1MafELIHGey/view?usp=drive_link" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block"
