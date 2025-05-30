@@ -41,12 +41,12 @@ const About = () => {
             
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
-                With over <span className="font-semibold text-primary">3.5 years</span> of experience leading innovation at the intersection of engineering and digital technology, I specialize in helping organizations in energy, oil & gas, and chemical industries evolve into intelligent, data-driven operations.
+                I drive <span className="font-semibold text-primary">innovation and operational excellence</span> across North America, Europe, and India by partnering with leading global energy, oil & gas, and chemical companies to deliver complex, multi-site digital transformation projects that enable intelligent, data-driven operations.
               </p>
               
               <div className="border-l-4 border-primary pl-6 py-2">
                 <p className="text-lg">
-                  My journey began in mechanical engineering, but my passion for solving complex industrial challenges using smart systems led me to the world of digital transformation.
+                  Leveraging a strong foundation in engineering and digital technology, I lead cross-functional teams to solve complex industrial challenges through smart, scalable solutions that improve asset integrity, safety, and operational efficiency.
                 </p>
               </div>
               
