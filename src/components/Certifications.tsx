@@ -13,41 +13,41 @@ const Certifications = () => {
       issuer: "Project Managment Institute (PMI)",
       date: "2025",
       credentialId: "4113366",
-      skills: ["Communication Management", "Risk Management", "Quality Management"],
+      skills: ["Communication Management", "Risk Management", "Quality Management", "Scope Management"],
       image: "/blob.png"
     },
     {
-      name: "Microsoft Certified: Azure Solutions Architect Expert",
-      issuer: "Microsoft",
-      date: "2022",
-      credentialId: "MSFT-789012",
-      skills: ["Azure", "Cloud Solutions", "Enterprise Architecture"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=80&h=80&fit=crop"
+      name: "Certified Maintenance & Reliability Professional (CMRP)",
+      issuer: "Society for Maintenance & Reliability Professionals (SMRP)",
+      date: "2025",
+      credentialId: "13362",
+      skills: ["CMMs", "Business Management", "Organization & Leadership", "Manufacturing Process Reliability"],
+      image: "/CMRP.png"
     },
     {
-      name: "Certified Scrum Master (CSM)",
-      issuer: "Scrum Alliance",
-      date: "2021",
-      credentialId: "CSM-345678",
-      skills: ["Agile", "Scrum", "Project Management"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=80&h=80&fit=crop"
+      name: "Six Sigma Green Belt Specialization",
+      issuer: "Kennesaw State University, Coursera",
+      date: "2024",
+      //credentialId: "CSM-345678",
+      skills: ["Team Management","Quality Improvement", "Process Capability", "Process Improvement"],
+      image: "/Green-Belt.png"
     },
-    {
-      name: "Google Professional Cloud Architect",
-      issuer: "Google Cloud",
-      date: "2022",
-      credentialId: "GCP-901234",
-      skills: ["GCP", "Cloud Solutions", "System Design"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop"
-    },
-    {
-      name: "Certified Digital Transformation Professional",
-      issuer: "Digital Transformation Institute",
-      date: "2023",
-      credentialId: "DTI-567890",
-      skills: ["Digital Strategy", "Change Management", "Innovation"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=80&h=80&fit=crop"
-    }
+    // {
+    //   name: "Google Professional Cloud Architect",
+    //   issuer: "Google Cloud",
+    //   date: "2022",
+    //   credentialId: "GCP-901234",
+    //   skills: ["GCP", "Cloud Solutions", "System Design"],
+    //   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop"
+    // },
+    // {
+    //   name: "Certified Digital Transformation Professional",
+    //   issuer: "Digital Transformation Institute",
+    //   date: "2023",
+    //   credentialId: "DTI-567890",
+    //   skills: ["Digital Strategy", "Change Management", "Innovation"],
+    //   image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=80&h=80&fit=crop"
+    // }
   ];
   
   useEffect(() => {
