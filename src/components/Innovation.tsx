@@ -2,7 +2,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 
 const Innovation = () => {
   return (
@@ -28,6 +28,12 @@ const Innovation = () => {
                     <div className="text-center">
                       <Badge className="mb-2">Published 2022</Badge>
                       <h3 className="text-xl font-semibold">Journal of Digital Transformation</h3>
+                      <a 
+                        href="#" 
+                        className="inline-flex items-center text-primary text-sm mt-3 hover:underline"
+                      >
+                        Read Paper <ExternalLink className="ml-1 h-4 w-4" />
+                      </a>
                     </div>
                   </div>
                   <div className="p-8 md:w-2/3">
@@ -52,6 +58,12 @@ const Innovation = () => {
                     <div className="text-center">
                       <Badge className="mb-2">Published 2020</Badge>
                       <h3 className="text-xl font-semibold">International Journal of AI Applications</h3>
+                      <a 
+                        href="#" 
+                        className="inline-flex items-center text-primary text-sm mt-3 hover:underline"
+                      >
+                        Read Paper <ExternalLink className="ml-1 h-4 w-4" />
+                      </a>
                     </div>
                   </div>
                   <div className="p-8 md:w-2/3">
@@ -117,9 +129,17 @@ const Innovation = () => {
                   <Badge variant="outline">Security</Badge>
                 </div>
                 
-                <p className="text-sm text-gray-500">
-                  This patent has been cited by over 20 subsequent patent applications and is currently being implemented in commercial applications.
-                </p>
+                <div className="flex justify-between items-center">
+                  <p className="text-sm text-gray-500">
+                    This patent has been cited by over 20 subsequent patent applications and is currently being implemented in commercial applications.
+                  </p>
+                  <a 
+                    href="#" 
+                    className="inline-flex items-center text-primary hover:underline"
+                  >
+                    View Patent <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </TabsContent>

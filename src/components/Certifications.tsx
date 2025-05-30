@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,35 +13,40 @@ const Certifications = () => {
       issuer: "Amazon Web Services",
       date: "2023",
       credentialId: "AWS-123456",
-      skills: ["Cloud Architecture", "AWS", "Infrastructure"]
+      skills: ["Cloud Architecture", "AWS", "Infrastructure"],
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop"
     },
     {
       name: "Microsoft Certified: Azure Solutions Architect Expert",
       issuer: "Microsoft",
       date: "2022",
       credentialId: "MSFT-789012",
-      skills: ["Azure", "Cloud Solutions", "Enterprise Architecture"]
+      skills: ["Azure", "Cloud Solutions", "Enterprise Architecture"],
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=200&fit=crop"
     },
     {
       name: "Certified Scrum Master (CSM)",
       issuer: "Scrum Alliance",
       date: "2021",
       credentialId: "CSM-345678",
-      skills: ["Agile", "Scrum", "Project Management"]
+      skills: ["Agile", "Scrum", "Project Management"],
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=200&fit=crop"
     },
     {
       name: "Google Professional Cloud Architect",
       issuer: "Google Cloud",
       date: "2022",
       credentialId: "GCP-901234",
-      skills: ["GCP", "Cloud Solutions", "System Design"]
+      skills: ["GCP", "Cloud Solutions", "System Design"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop"
     },
     {
       name: "Certified Digital Transformation Professional",
       issuer: "Digital Transformation Institute",
       date: "2023",
       credentialId: "DTI-567890",
-      skills: ["Digital Strategy", "Change Management", "Innovation"]
+      skills: ["Digital Strategy", "Change Management", "Innovation"],
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop"
     }
   ];
   
@@ -84,6 +88,13 @@ const Certifications = () => {
               className={`overflow-hidden hover-card ${animated ? 'animate-fade-in' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 150}ms` }}
             >
+              <div className="aspect-video bg-gray-100 overflow-hidden">
+                <img 
+                  src={cert.image} 
+                  alt={cert.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <CardContent className="p-6">
                 <div className="flex items-start mb-4">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-3 flex-shrink-0">
