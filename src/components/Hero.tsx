@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -27,13 +26,13 @@ const Hero = () => {
 
   return (
     <section id="hero" className="min-h-screen flex items-center relative overflow-hidden">
-      {/* Background with darker gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-gray-100 to-slate-200 z-0"></div>
+      {/* Background with bluish gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-blue-50 to-slate-200 z-0"></div>
       
       {/* Background gradient effects */}
-      <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-slate-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-primary/8 rounded-full blur-2xl"></div>
+      <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-300/15 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
       
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center">
