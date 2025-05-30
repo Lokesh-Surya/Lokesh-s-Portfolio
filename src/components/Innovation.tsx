@@ -26,10 +26,12 @@ const Innovation = () => {
                 <div className="md:flex">
                   <div className="md:w-1/3 bg-blue-50 flex items-center justify-center p-8">
                     <div className="text-center">
-                      <Badge className="mb-2">Published 2022</Badge>
-                      <h3 className="text-xl font-semibold">Journal of Digital Transformation</h3>
+                      <Badge className="mb-2">Published 2021</Badge>
+                      <h3 className="text-xl font-semibold">IOP Conference Series: Earth and Environmental Science</h3>
                       <a 
-                        href="#" 
+                        href="https://iopscience.iop.org/article/10.1088/1755-1315/850/1/012038" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                         className="inline-flex items-center text-primary text-sm mt-3 hover:underline"
                       >
                         Read Paper <ExternalLink className="ml-1 h-4 w-4" />
@@ -38,7 +40,7 @@ const Innovation = () => {
                   </div>
                   <div className="p-8 md:w-2/3">
                     <div className="uppercase tracking-wide text-sm text-primary font-semibold">Research Paper</div>
-                    <h3 className="block mt-1 text-lg font-medium">Enhancing Enterprise Agility Through Integrated Digital Transformation Frameworks</h3>
+                    <h3 className="block mt-1 text-lg font-medium">Effect of solidity on the dynamic behaviour of the Darrieus turbine with leading-edge protuberance</h3>
                     <p className="mt-2 text-gray-600">
                       This research explores how organizations can develop integrated frameworks for digital transformation that enhance operational agility while maintaining strategic alignment.
                     </p>
