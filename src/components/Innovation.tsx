@@ -163,14 +163,14 @@ const Innovation = () => {
               <Card className="hover-card">
                 <CardHeader className="pb-2">
                   <div className="flex justify-between items-start">
-                    <CardTitle className="text-xl">AI Assistant Platform</CardTitle>
-                    <Badge>2019</Badge>
+                    <CardTitle className="text-xl">AI-Powered Project Intelligence Platform</CardTitle>
+                    <Badge>2025</Badge>
                   </div>
-                  <CardDescription>Project Lead</CardDescription>
+                  <CardDescription>Freelance</CardDescription>
                 </CardHeader>
                 <CardContent className="pb-2">
                   <p>
-                    Developed an AI-powered virtual assistant platform that provides personalized support for customer service across multiple industries.
+                    Built a smart project management tool that automates planning, status updates, and risk forecasting using natural language inputs and AI predictions.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between items-center pt-2">
@@ -178,9 +178,9 @@ const Innovation = () => {
                     <Badge variant="outline">AI</Badge>
                     <Badge variant="outline">NLP</Badge>
                   </div>
-                  <a href="#" className="inline-flex items-center text-primary text-sm">
+                  {/* <a href="#" className="inline-flex items-center text-primary text-sm">
                     Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </a> */}
                 </CardFooter>
               </Card>
 
@@ -188,14 +188,14 @@ const Innovation = () => {
               <Card className="hover-card">
                 <CardHeader className="pb-2">
                   <div className="flex justify-between items-start">
-                    <CardTitle className="text-xl">Smart City Dashboard</CardTitle>
-                    <Badge>2018</Badge>
+                    <CardTitle className="text-xl">Real-Time Project Health Monitoring Tool</CardTitle>
+                    <Badge>2024</Badge>
                   </div>
-                  <CardDescription>Technical Architect</CardDescription>
+                  <CardDescription>Freelance</CardDescription>
                 </CardHeader>
                 <CardContent className="pb-2">
                   <p>
-                    Designed and implemented a comprehensive smart city monitoring dashboard that integrates data from multiple IoT sources for real-time decision making.
+                    An industrial-grade dashboard that connects with PM tools and field sensors to assess execution health in real-time.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between items-center pt-2">
@@ -203,9 +203,9 @@ const Innovation = () => {
                     <Badge variant="outline">IoT</Badge>
                     <Badge variant="outline">Data Visualization</Badge>
                   </div>
-                  <a href="#" className="inline-flex items-center text-primary text-sm">
+                  {/* <a href="#" className="inline-flex items-center text-primary text-sm">
                     Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </a> */}
                 </CardFooter>
               </Card>
 
@@ -213,14 +213,14 @@ const Innovation = () => {
               <Card className="hover-card">
                 <CardHeader className="pb-2">
                   <div className="flex justify-between items-start">
-                    <CardTitle className="text-xl">FinTech Payment Solution</CardTitle>
-                    <Badge>2017</Badge>
+                    <CardTitle className="text-xl">Predictive Resource Allocation System</CardTitle>
+                    <Badge>2024</Badge>
                   </div>
-                  <CardDescription>Solution Architect</CardDescription>
+                  <CardDescription>Freelance</CardDescription>
                 </CardHeader>
                 <CardContent className="pb-2">
                   <p>
-                    Created a secure, scalable payment processing system that handles millions of transactions monthly with advanced fraud detection capabilities.
+                    Built a system that predicts optimal team allocation across multiple parallel projects using machine learning on historical velocity, task complexity, and availability.
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-between items-center pt-2">
@@ -228,9 +228,9 @@ const Innovation = () => {
                     <Badge variant="outline">FinTech</Badge>
                     <Badge variant="outline">Security</Badge>
                   </div>
-                  <a href="#" className="inline-flex items-center text-primary text-sm">
+                  {/* <a href="#" className="inline-flex items-center text-primary text-sm">
                     Learn more <ArrowUpRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </a> */}
                 </CardFooter>
               </Card>
             </div>
