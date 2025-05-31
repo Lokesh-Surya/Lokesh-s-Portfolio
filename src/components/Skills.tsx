@@ -27,14 +27,17 @@ const Skills = () => {
       title: "Technical",
       description: "Advanced technical competencies and technology implementation",
       skills: [
-        "AI/ML Implementation", 
-        "Cloud Architecture", 
-        "Data Analytics",
-        "Cybersecurity",
-        "IoT Solutions",
-        "API Integration",
-        "Blockchain",
-        "DevOps"
+        "Advanced Integrated Mechanical Integrity (AIMI)", 
+        "Intelligent Asset Management & Reliability", 
+        "Digital Twin Implementation",
+        "Predictive Maintenance Strategy",
+        "Asset Hierarchy Structuring (ISO 14224)",
+        "Machine Learning for Equipment Health",
+        "Industrial IoT Integration",
+        "Real-Time Operational Analytics",
+        "AR-Enhanced Maintenance Workflows",
+        "Automated Engineering Document Validation",
+        "Risk-Based Inspection Planning"
       ]
     },
     {
@@ -42,12 +45,12 @@ const Skills = () => {
       title: "Leadership",
       description: "Guiding teams and stakeholders through digital change",
       skills: [
-        "Change Management", 
+        "Project Management", 
         "Team Leadership", 
-        "Stakeholder Management",
-        "Project Management",
         "Cross-functional Collaboration",
+        "Stakeholder Management",
         "Training & Enablement",
+        "Change Management",
         "Strategic Communication"
       ]
     }

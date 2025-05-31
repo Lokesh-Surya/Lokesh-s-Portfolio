@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, ExternalLink } from "lucide-react";
 
 const Certifications = () => {
   const [animated, setAnimated] = useState(false);
@@ -14,7 +15,8 @@ const Certifications = () => {
       date: "2025",
       credentialId: "4113366",
       skills: ["Project Management","Predictive", "Agile", "Hybrid"],
-      image: "/blob.png"
+      image: "/blob.png",
+      certificateUrl: "#"
     },
     {
       name: "Certified Maintenance & Reliability Professional (CMRP)",
@@ -22,7 +24,8 @@ const Certifications = () => {
       date: "2025",
       credentialId: "13362",
       skills: ["CMMS", "Business Management", "Organization & Leadership", "Manufacturing Process Reliability"],
-      image: "/CMRP.png"
+      image: "/CMRP.png",
+      certificateUrl: "#"
     },
     {
       name: "Six Sigma Green Belt Specialization",
@@ -30,24 +33,9 @@ const Certifications = () => {
       date: "2024",
       credentialId: "NIL",
       skills: ["Team Management","Quality Improvement", "Process Capability", "Process Improvement"],
-      image: "/Green-Belt.png"
-    },
-    // {
-    //   name: "Google Professional Cloud Architect",
-    //   issuer: "Google Cloud",
-    //   date: "2022",
-    //   credentialId: "GCP-901234",
-    //   skills: ["GCP", "Cloud Solutions", "System Design"],
-    //   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=80&h=80&fit=crop"
-    // },
-    // {
-    //   name: "Certified Digital Transformation Professional",
-    //   issuer: "Digital Transformation Institute",
-    //   date: "2023",
-    //   credentialId: "DTI-567890",
-    //   skills: ["Digital Strategy", "Change Management", "Innovation"],
-    //   image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=80&h=80&fit=crop"
-    // }
+      image: "/Green-Belt.png",
+      certificateUrl: "#"
+    }
   ];
   
   useEffect(() => {
@@ -108,7 +96,7 @@ const Certifications = () => {
                 
                 <p className="text-xs text-gray-500 mb-3">Credential ID: {cert.credentialId}</p>
                 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {cert.skills.map((skill, i) => (
                     <Badge 
                       key={`skill-${i}`} 
@@ -119,6 +107,16 @@ const Certifications = () => {
                     </Badge>
                   ))}
                 </div>
+                
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => window.open(cert.certificateUrl, '_blank')}
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  View Certificate
+                </Button>
               </CardContent>
             </Card>
           ))}
