@@ -16,7 +16,7 @@ const Certifications = () => {
       credentialId: "4113366",
       skills: ["Project Management","Predictive", "Agile", "Hybrid"],
       image: "/blob.png",
-      certificateUrl: "#"
+      certificateUrl: "https://drive.google.com/file/d/1iqgwxpll5gn-I81cmqlAQzYqLsDZsoGQ/view?usp=drive_link"
     },
     {
       name: "Certified Maintenance & Reliability Professional (CMRP)",
@@ -25,7 +25,7 @@ const Certifications = () => {
       credentialId: "13362",
       skills: ["CMMS", "Business Management", "Organization & Leadership", "Manufacturing Process Reliability"],
       image: "/CMRP.png",
-      certificateUrl: "#"
+      certificateUrl: "https://drive.google.com/file/d/1PdXrYRdHb3hyBXCnmpsbmKtOa63v-iBr/view?usp=drive_link"
     },
     {
       name: "Six Sigma Green Belt Specialization",
@@ -108,15 +108,21 @@ const Certifications = () => {
                   ))}
                 </div>
                 
-                <Button 
-                  variant="outline" 
-                  size="sm" 
+                <a
+                  href={cert.certificateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full"
-                  onClick={() => window.open(cert.certificateUrl, '_blank')}
                 >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  View Certificate
-                </Button>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full flex justify-center"
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    View Certificate
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}

@@ -30,13 +30,8 @@ const Skills = () => {
         "Advanced Integrated Mechanical Integrity (AIMI)", 
         "Intelligent Asset Management & Reliability", 
         "Digital Twin Implementation",
-        "Predictive Maintenance Strategy",
-        "Asset Hierarchy Structuring (ISO 14224)",
         "Machine Learning for Equipment Health",
         "Industrial IoT Integration",
-        "Real-Time Operational Analytics",
-        "AR-Enhanced Maintenance Workflows",
-        "Automated Engineering Document Validation",
         "Risk-Based Inspection Planning"
       ]
     },
