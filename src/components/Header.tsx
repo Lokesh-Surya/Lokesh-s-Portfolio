@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import {
@@ -11,7 +12,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,9 +47,11 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <a href="#home" className="text-xl font-bold flex items-center gap-2">
-            <Avatar className="h-8 w-8 bg-gradient-to-br from-primary/80 to-blue-400/80">
-              <AvatarFallback className="text-white">L</AvatarFallback>
-            </Avatar>
+            <img 
+              src="/lovable-uploads/e314e7b9-593c-45cf-bfb6-1487ea07f56a.png" 
+              alt="Lokesh Logo" 
+              className="h-8 w-8 rounded-full"
+            />
             <span className="h-2 w-2 rounded-full bg-primary"></span>
           </a>
 
