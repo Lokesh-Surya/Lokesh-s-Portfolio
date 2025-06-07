@@ -32,7 +32,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <a href="#hero" className="text-xl font-bold flex items-center gap-2">
+          <a href="#home" className="text-xl font-bold flex items-center gap-2">
             <Avatar className="h-8 w-8 bg-gradient-to-br from-primary/80 to-blue-400/80">
               <AvatarFallback className="text-white">L</AvatarFallback>
             </Avatar>
@@ -42,6 +42,15 @@ const Header = () => {
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  href="#home"
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Home
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#about"
@@ -60,6 +69,15 @@ const Header = () => {
                         <a
                           href="#research"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            // First navigate to innovation section, then switch to research tab
+                            document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => {
+                              const researchTab = document.querySelector('[value="research"]') as HTMLButtonElement;
+                              researchTab?.click();
+                            }, 300);
+                          }}
                         >
                           <div className="text-sm font-medium leading-none">Research</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
@@ -73,6 +91,15 @@ const Header = () => {
                         <a
                           href="#patent"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            // First navigate to innovation section, then switch to patent tab
+                            document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => {
+                              const patentTab = document.querySelector('[value="patent"]') as HTMLButtonElement;
+                              patentTab?.click();
+                            }, 300);
+                          }}
                         >
                           <div className="text-sm font-medium leading-none">Patent</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
@@ -86,6 +113,15 @@ const Header = () => {
                         <a
                           href="#projects"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            // First navigate to innovation section, then switch to projects tab
+                            document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
+                            setTimeout(() => {
+                              const projectsTab = document.querySelector('[value="projects"]') as HTMLButtonElement;
+                              projectsTab?.click();
+                            }, 300);
+                          }}
                         >
                           <div className="text-sm font-medium leading-none">Projects</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
@@ -142,6 +178,9 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="container py-4 px-4 flex flex-col space-y-4">
+            <a href="#home" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              Home
+            </a>
             <a href="#about" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               About
             </a>
@@ -150,13 +189,49 @@ const Header = () => {
                 Innovation <ChevronDown className="ml-1 h-3 w-3" />
               </p>
               <div className="pl-4 flex flex-col space-y-2">
-                <a href="#research" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                <a 
+                  href="#research" 
+                  className="text-sm text-gray-700 hover:text-primary transition-colors" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                      const researchTab = document.querySelector('[value="research"]') as HTMLButtonElement;
+                      researchTab?.click();
+                    }, 300);
+                  }}
+                >
                   Research
                 </a>
-                <a href="#patent" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                <a 
+                  href="#patent" 
+                  className="text-sm text-gray-700 hover:text-primary transition-colors" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                      const patentTab = document.querySelector('[value="patent"]') as HTMLButtonElement;
+                      patentTab?.click();
+                    }, 300);
+                  }}
+                >
                   Patent
                 </a>
-                <a href="#projects" className="text-sm text-gray-700 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                <a 
+                  href="#projects" 
+                  className="text-sm text-gray-700 hover:text-primary transition-colors" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                      const projectsTab = document.querySelector('[value="projects"]') as HTMLButtonElement;
+                      projectsTab?.click();
+                    }, 300);
+                  }}
+                >
                   Projects
                 </a>
               </div>
