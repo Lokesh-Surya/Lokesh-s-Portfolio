@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -98,7 +99,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="section-padding bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="feedback" className="section-padding bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Feedback Records</h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-12"></div>
