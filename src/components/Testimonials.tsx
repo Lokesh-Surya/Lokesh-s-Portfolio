@@ -100,7 +100,7 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="section-padding bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Client Feedback Records</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Feedback Records</h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-12"></div>
         
         <div className="max-w-4xl mx-auto">
