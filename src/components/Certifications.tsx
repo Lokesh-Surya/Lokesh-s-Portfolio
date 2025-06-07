@@ -66,7 +66,7 @@ const Certifications = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Certifications</h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-          Professional qualifications that validate expertise in digital transformation and technology leadership
+          Professional qualifications that substantiate advanced expertise in digital transformation, technology leadership, and the execution of complex engineering and AI-driven initiatives within industrial and enterprise environments.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
