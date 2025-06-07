@@ -25,17 +25,17 @@ const Certifications = () => {
       credentialId: "13362",
       skills: ["CMMS", "Business Management", "Organization & Leadership", "Manufacturing Process Reliability"],
       image: "/CMRP.png",
-      certificateUrl: "https://drive.google.com/file/d/1PdXrYRdHb3hyBXCnmpsbmKtOa63v-iBr/view?usp=drive_link"
+      certificateUrl: "https://drive.google.com/file/d/1xo1jCKEjf5HtHz8jfF0lUOLBwHg45ULF/view?usp=drive_link"
     },
-    {
-      name: "Six Sigma Green Belt Specialization",
-      issuer: "Kennesaw State University, Coursera",
-      date: "2024",
-      credentialId: "NIL",
-      skills: ["Team Management","Quality Improvement", "Process Capability", "Process Improvement"],
-      image: "/Green-Belt.png",
-      certificateUrl: "#"
-    }
+    // {
+    //   name: "Six Sigma Green Belt Specialization",
+    //   issuer: "Kennesaw State University, Coursera",
+    //   date: "2024",
+    //   credentialId: "NIL",
+    //   skills: ["Team Management","Quality Improvement", "Process Capability", "Process Improvement"],
+    //   image: "/Green-Belt.png",
+    //   certificateUrl: "#"
+    // }
   ];
   
   useEffect(() => {
