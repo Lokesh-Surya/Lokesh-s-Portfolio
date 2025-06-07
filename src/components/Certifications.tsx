@@ -7,14 +7,14 @@ import { CheckCircle, ExternalLink } from "lucide-react";
 const Certifications = () => {
   const [animated, setAnimated] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  
+
   const certifications = [
     {
       name: "Project Managment Professional (PMP)",
       issuer: "Project Managment Institute (PMI)",
       date: "2025",
       credentialId: "4113366",
-      skills: ["Project Management","Predictive", "Agile", "Hybrid"],
+      skills: ["Project Management", "Predictive", "Agile", "Hybrid"],
       image: "/blob.png",
       certificateUrl: "https://drive.google.com/file/d/1iqgwxpll5gn-I81cmqlAQzYqLsDZsoGQ/view?usp=drive_link"
     },
@@ -27,17 +27,17 @@ const Certifications = () => {
       image: "/CMRP.png",
       certificateUrl: "https://drive.google.com/file/d/1xo1jCKEjf5HtHz8jfF0lUOLBwHg45ULF/view?usp=drive_link"
     },
-    // {
-    //   name: "Six Sigma Green Belt Specialization",
-    //   issuer: "Kennesaw State University, Coursera",
-    //   date: "2024",
-    //   credentialId: "NIL",
-    //   skills: ["Team Management","Quality Improvement", "Process Capability", "Process Improvement"],
-    //   image: "/Green-Belt.png",
-    //   certificateUrl: "#"
-    // }
+    {
+      name: "Six Sigma Green Belt Specialization",
+      issuer: "Kennesaw State University, Coursera",
+      date: "2024",
+      credentialId: "NIL",
+      skills: ["Team Management", "Quality Improvement", "Process Capability", "Process Improvement"],
+      image: "/Green-Belt.png",
+      certificateUrl: "#" // Will be conditionally excluded below
+    }
   ];
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -48,11 +48,11 @@ const Certifications = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
@@ -68,10 +68,10 @@ const Certifications = () => {
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
           Professional qualifications that validate expertise in digital transformation and technology leadership
         </p>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
-            <Card 
+            <Card
               key={`cert-${index}`}
               className={`overflow-hidden hover-card ${animated ? 'animate-fade-in' : 'opacity-0'}`}
               style={{ animationDelay: `${index * 150}ms` }}
@@ -79,8 +79,8 @@ const Certifications = () => {
               <CardContent className="p-6">
                 <div className="flex items-start mb-4">
                   <div className="w-16 h-16 rounded-lg bg-gray-100 overflow-hidden mr-4 flex-shrink-0">
-                    <img 
-                      src={cert.image} 
+                    <img
+                      src={cert.image}
                       alt={cert.name}
                       className="w-full h-full object-cover"
                     />
@@ -93,13 +93,13 @@ const Certifications = () => {
                     <p className="text-gray-600 text-sm">{cert.issuer} • {cert.date}</p>
                   </div>
                 </div>
-                
+
                 <p className="text-xs text-gray-500 mb-3">Credential ID: {cert.credentialId}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {cert.skills.map((skill, i) => (
-                    <Badge 
-                      key={`skill-${i}`} 
+                    <Badge
+                      key={`skill-${i}`}
                       variant="secondary"
                       className="bg-blue-50 text-blue-700 hover:bg-blue-100"
                     >
@@ -107,22 +107,24 @@ const Certifications = () => {
                     </Badge>
                   ))}
                 </div>
-                
-                <a
-                  href={cert.certificateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full flex justify-center"
+
+                {cert.certificateUrl && cert.certificateUrl !== "#" && (
+                  <a
+                    href={cert.certificateUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full"
                   >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    View Certificate
-                  </Button>
-                </a>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full flex justify-center"
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      View Certificate
+                    </Button>
+                  </a>
+                )}
               </CardContent>
             </Card>
           ))}
