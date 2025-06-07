@@ -11,81 +11,12 @@ const Innovation = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Innovation</h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-12"></div>
 
-        <Tabs defaultValue="research" className="w-full">
+        <Tabs defaultValue="patent" className="w-full">
           <TabsList className="w-full max-w-md mx-auto grid grid-cols-3 mb-12">
-            <TabsTrigger value="research">Research</TabsTrigger>
             <TabsTrigger value="patent">Patent</TabsTrigger>
+            <TabsTrigger value="research">Research</TabsTrigger>
             <TabsTrigger value="projects">Projects</TabsTrigger>
           </TabsList>
-
-          {/* Research Section */}
-          <TabsContent value="research" className="animate-slide-in">
-            <div id="research" className="space-y-12">
-              {/* Research Item 1 */}
-              <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                <div className="md:flex">
-                  <div className="md:w-1/3 bg-blue-50 flex items-center justify-center p-8">
-                    <div className="text-center">
-                      <Badge className="mb-2">Published 2021</Badge>
-                      <h3 className="text-xl font-semibold">IOP Conference Series: Earth and Environmental Science</h3>
-                      <a 
-                        href="https://iopscience.iop.org/article/10.1088/1755-1315/850/1/012038" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-primary text-sm mt-3 hover:underline"
-                      >
-                        Read Paper <ExternalLink className="ml-1 h-4 w-4" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="p-8 md:w-2/3">
-                    <div className="uppercase tracking-wide text-sm text-primary font-semibold">Research Paper</div>
-                    <h3 className="block mt-1 text-lg font-medium">Effect of solidity on the dynamic behaviour of the Darrieus turbine with leading-edge protuberance</h3>
-                    <p className="mt-2 text-gray-600">
-                      This research explores the dynamic behavior of straight-type Darrieus turbines with leading-edge protuberance under varying solidity and tip speed ratios, identifying optimal blade configurations to mitigate vortex-induced and buffeting vibrations.
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      <Badge variant="outline">Sustainable Technology</Badge>
-                      <Badge variant="outline">Wind Energy</Badge>
-                      <Badge variant="outline">Vertical Axis Wind Turbine</Badge>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Research Item 2 */}
-              <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                <div className="md:flex">
-                  <div className="md:w-1/3 bg-blue-50 flex items-center justify-center p-8">
-                    <div className="text-center">
-                      <Badge className="mb-2">Published 2020</Badge>
-                      <h3 className="text-xl font-semibold">Indian Engineering Congress</h3>
-                      <a 
-                        href="https://www.ieindia.org/webui/ajax/Downloads/WebUI_PDF/IEC/IEC_35.pdf"
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="inline-flex items-center text-primary text-sm mt-3 hover:underline"
-                      >
-                        Read Paper <ExternalLink className="ml-1 h-4 w-4" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="p-8 md:w-2/3">
-                    <div className="uppercase tracking-wide text-sm text-primary font-semibold">Research Paper</div>
-                    <h3 className="block mt-1 text-lg font-medium">Aerodynamic characteristics of grooved rotating circular cylinder</h3>
-                    <p className="mt-2 text-gray-600">
-                      This research explores the aerodynamic effects of grooves on a rotating circular cylinder in uniform flow, revealing significant drag reduction and lift enhancement across varying groove and spin ratios through numerical simulations.
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      <Badge variant="outline">Performance Improvement</Badge>
-                      <Badge variant="outline">Drag Reduction</Badge>
-                      <Badge variant="outline">Lift Enhancement</Badge>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </TabsContent>
 
           {/* Patent Section */}
           <TabsContent value="patent" className="animate-slide-in">
@@ -151,6 +82,75 @@ const Innovation = () => {
                   >
                     View Patent <ExternalLink className="ml-1 h-4 w-4" />
                   </a>
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+
+          {/* Research Section */}
+          <TabsContent value="research" className="animate-slide-in">
+            <div id="research" className="space-y-12">
+              {/* Research Item 1 */}
+              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:w-1/3 bg-blue-50 flex items-center justify-center p-8">
+                    <div className="text-center">
+                      <Badge className="mb-2">Published 2021</Badge>
+                      <h3 className="text-xl font-semibold">IOP Conference Series: Earth and Environmental Science</h3>
+                      <a 
+                        href="https://iopscience.iop.org/article/10.1088/1755-1315/850/1/012038" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-primary text-sm mt-3 hover:underline"
+                      >
+                        Read Paper <ExternalLink className="ml-1 h-4 w-4" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="p-8 md:w-2/3">
+                    <div className="uppercase tracking-wide text-sm text-primary font-semibold">Research Paper</div>
+                    <h3 className="block mt-1 text-lg font-medium">Effect of solidity on the dynamic behaviour of the Darrieus turbine with leading-edge protuberance</h3>
+                    <p className="mt-2 text-gray-600">
+                      This research explores the dynamic behavior of straight-type Darrieus turbines with leading-edge protuberance under varying solidity and tip speed ratios, identifying optimal blade configurations to mitigate vortex-induced and buffeting vibrations.
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <Badge variant="outline">Sustainable Technology</Badge>
+                      <Badge variant="outline">Wind Energy</Badge>
+                      <Badge variant="outline">Vertical Axis Wind Turbine</Badge>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Research Item 2 */}
+              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                <div className="md:flex">
+                  <div className="md:w-1/3 bg-blue-50 flex items-center justify-center p-8">
+                    <div className="text-center">
+                      <Badge className="mb-2">Published 2020</Badge>
+                      <h3 className="text-xl font-semibold">Indian Engineering Congress</h3>
+                      <a 
+                        href="https://www.ieindia.org/webui/ajax/Downloads/WebUI_PDF/IEC/IEC_35.pdf"
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="inline-flex items-center text-primary text-sm mt-3 hover:underline"
+                      >
+                        Read Paper <ExternalLink className="ml-1 h-4 w-4" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="p-8 md:w-2/3">
+                    <div className="uppercase tracking-wide text-sm text-primary font-semibold">Research Paper</div>
+                    <h3 className="block mt-1 text-lg font-medium">Aerodynamic characteristics of grooved rotating circular cylinder</h3>
+                    <p className="mt-2 text-gray-600">
+                      This research explores the aerodynamic effects of grooves on a rotating circular cylinder in uniform flow, revealing significant drag reduction and lift enhancement across varying groove and spin ratios through numerical simulations.
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <Badge variant="outline">Performance Improvement</Badge>
+                      <Badge variant="outline">Drag Reduction</Badge>
+                      <Badge variant="outline">Lift Enhancement</Badge>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
