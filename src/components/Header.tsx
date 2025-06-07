@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
@@ -71,7 +70,6 @@ const Header = () => {
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           onClick={(e) => {
                             e.preventDefault();
-                            // First navigate to innovation section, then switch to research tab
                             document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
                             setTimeout(() => {
                               const researchTab = document.querySelector('[value="research"]') as HTMLButtonElement;
@@ -93,7 +91,6 @@ const Header = () => {
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           onClick={(e) => {
                             e.preventDefault();
-                            // First navigate to innovation section, then switch to patent tab
                             document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
                             setTimeout(() => {
                               const patentTab = document.querySelector('[value="patent"]') as HTMLButtonElement;
@@ -115,7 +112,6 @@ const Header = () => {
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           onClick={(e) => {
                             e.preventDefault();
-                            // First navigate to innovation section, then switch to projects tab
                             document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
                             setTimeout(() => {
                               const projectsTab = document.querySelector('[value="projects"]') as HTMLButtonElement;
