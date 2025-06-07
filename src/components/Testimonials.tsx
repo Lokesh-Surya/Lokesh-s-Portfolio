@@ -7,47 +7,47 @@ import { ChevronLeft, ChevronRight, Star, User, Calendar, Building } from "lucid
 const feedbackRecords = [
   {
     id: 1,
-    feedbackType: "Project Excellence",
-    content: "Lokesh led our company's digital transformation initiative with exceptional vision and technical expertise. He has a unique ability to translate complex technical concepts into business value.",
-    reviewer: "Sarah Johnson",
-    position: "CIO",
-    company: "Global Enterprises Inc.",
+    feedbackType: "AI Project Delivery",
+    content: "Lokesh delivered a cutting-edge AI-powered project management platform that far exceeded our expectations. His ability to blend deep technical knowledge with user-centric design helped us automate project planning, reporting, and risk forecasting seamlessly. His work significantly enhanced decision-making across our teams.",
+    reviewer: "Yuvaraj Premlal",
+    position: "Founder",
+    company: "Project Perfect",
     rating: 5,
-    date: "March 2024",
-    projectImpact: "40% efficiency increase"
+    date: "Jan 2025",
+    projectImpact: "Reduced manual reporting effort by 60% and improved planning accuracy by 35%"
   },
   {
     id: 2,
-    feedbackType: "Strategic Leadership",
-    content: "Working with Lokesh was transformative for our organization. His strategic approach to digital innovation helped us achieve remarkable results within just 6 months.",
-    reviewer: "Michael Chen",
-    position: "CEO",
-    company: "TechFuture Solutions",
+    feedbackType: "Technical Leadership & Initiative",
+    content: "Lokesh demonstrated strong initiative and perseverance in reviving and enhancing the PTC ThingWorx platform. His technical expertise and proactive involvement were critical in building a reusable asset performance solution integrated with the CNIUM model. Beyond development, Lokesh took ownership in aligning technical execution with project goals, ensuring timely delivery and stakeholder alignment. His leadership made a lasting impact on the project's success.",
+    reviewer: "Biju Varughese",
+    position: "Leadership",
+    company: "Accenture",
     rating: 5,
-    date: "February 2024",
-    projectImpact: "6-month digital transformation"
+    date: "Dec 2024",
+    projectImpact: "Accelerated asset delivery and enhanced platform reuse across multiple engagements"
   },
   {
     id: 3,
-    feedbackType: "Technical Innovation",
-    content: "Lokesh's expertise in enterprise architecture and digital strategy was invaluable to our digital transformation journey. He consistently delivered beyond expectations.",
-    reviewer: "Priya Sharma",
-    position: "Head of Innovation",
-    company: "NextGen Systems",
+    feedbackType: "Team Collaboration & Innovation",
+    content: "Lokesh’s deep technical acumen, collaborative mindset, and proactive approach significantly contributed to both client delivery and internal innovation. His ability to learn and apply emerging technologies to real-world challenges, while actively supporting his team, made him a standout contributor across multiple high-impact projects. His professionalism and dedication were consistently recognized by both peers and clients.",
+    reviewer: "Gururaj Kanchagar",
+    position: "Senior Manager",
+    company: "Accenture",
     rating: 5,
-    date: "January 2024",
-    projectImpact: "Enterprise architecture redesign"
+    date: "Aug 2024",
+    projectImpact: "Strengthened client trust and drove innovation in asset development initiatives"
   },
   {
     id: 4,
-    feedbackType: "Solution Architecture",
-    content: "The blockchain solution Lokesh designed for our supply chain has completely revolutionized our operations, increasing transparency and reducing verification times significantly.",
-    reviewer: "David Thompson",
-    position: "COO",
-    company: "Global Logistics Partners",
+    feedbackType: "Project Ownership & Mentorship",
+    content: "Lokesh quickly became a key contributor to the AIMI Bayway project, leading several critical deliverables with precision and ownership. His ability to mentor team members, collaborate effectively with onshore stakeholders, and introduce innovative solutions to streamline handover processes significantly enhanced team performance and project efficiency. His work has been consistently recognized and appreciated by both peers and leadership.",
+    reviewer: "Abhimanyu Singh Rathore",
+    position: "Management Consultant Manager",
+    company: "Accenture",
     rating: 5,
-    date: "December 2023",
-    projectImpact: "85% verification time reduction"
+    date: "Mar 2024",
+    projectImpact: "Improved handover efficiency and elevated team productivity through mentorship and innovation"
   },
 ];
 
