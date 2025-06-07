@@ -1,6 +1,14 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle
+} from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -9,7 +17,6 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Handle scroll effect for header
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -18,13 +25,21 @@ const Header = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Helper to switch tab inside Innovation section
+  const switchInnovationTab = (tabValue: string) => {
+    document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      const tabButton = document.querySelector(`[value="${tabValue}"]`) as HTMLButtonElement;
+      tabButton?.click();
+    }, 300);
+  };
+
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white/90 shadow-md backdrop-blur-md' : 'bg-white'
       }`}
@@ -37,53 +52,27 @@ const Header = () => {
             </Avatar>
             <span className="h-2 w-2 rounded-full bg-primary"></span>
           </a>
-          
+
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#home"
-                  className={navigationMenuTriggerStyle()}
-                >
+                <NavigationMenuLink href="#home" className={navigationMenuTriggerStyle()}>
                   Home
                 </NavigationMenuLink>
               </NavigationMenuItem>
-              
+
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#about"
-                  className={navigationMenuTriggerStyle()}
-                >
+                <NavigationMenuLink href="#about" className={navigationMenuTriggerStyle()}>
                   About
                 </NavigationMenuLink>
               </NavigationMenuItem>
-              
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Innovation</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-4 w-[200px]">
-                    <li>
-                      <NavigationMenuLink asChild>
-                        <a
-                          href="#research"
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
-                            setTimeout(() => {
-                              const researchTab = document.querySelector('[value="research"]') as HTMLButtonElement;
-                              researchTab?.click();
-                            }, 300);
-                          }}
-                        >
-                          <div className="text-sm font-medium leading-none">Research</div>
-                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                            Academic publications
-                          </p>
-                        </a>
-                      </NavigationMenuLink>
-                    </li>
+                    {/* Patent first */}
                     <li>
                       <NavigationMenuLink asChild>
                         <a
@@ -91,11 +80,7 @@ const Header = () => {
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           onClick={(e) => {
                             e.preventDefault();
-                            document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
-                            setTimeout(() => {
-                              const patentTab = document.querySelector('[value="patent"]') as HTMLButtonElement;
-                              patentTab?.click();
-                            }, 300);
+                            switchInnovationTab("patent");
                           }}
                         >
                           <div className="text-sm font-medium leading-none">Patent</div>
@@ -105,6 +90,27 @@ const Header = () => {
                         </a>
                       </NavigationMenuLink>
                     </li>
+
+                    {/* Research second */}
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <a
+                          href="#research"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            switchInnovationTab("research");
+                          }}
+                        >
+                          <div className="text-sm font-medium leading-none">Research</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Academic publications
+                          </p>
+                        </a>
+                      </NavigationMenuLink>
+                    </li>
+
+                    {/* Projects third */}
                     <li>
                       <NavigationMenuLink asChild>
                         <a
@@ -112,11 +118,7 @@ const Header = () => {
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           onClick={(e) => {
                             e.preventDefault();
-                            document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
-                            setTimeout(() => {
-                              const projectsTab = document.querySelector('[value="projects"]') as HTMLButtonElement;
-                              projectsTab?.click();
-                            }, 300);
+                            switchInnovationTab("projects");
                           }}
                         >
                           <div className="text-sm font-medium leading-none">Projects</div>
@@ -129,36 +131,27 @@ const Header = () => {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              
+
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#certifications"
-                  className={navigationMenuTriggerStyle()}
-                >
+                <NavigationMenuLink href="#certifications" className={navigationMenuTriggerStyle()}>
                   Certifications
                 </NavigationMenuLink>
               </NavigationMenuItem>
-              
+
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#skills"
-                  className={navigationMenuTriggerStyle()}
-                >
+                <NavigationMenuLink href="#skills" className={navigationMenuTriggerStyle()}>
                   Skills
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#testimonials"
-                  className={navigationMenuTriggerStyle()}
-                >
+                <NavigationMenuLink href="#testimonials" className={navigationMenuTriggerStyle()}>
                   Feedback
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-          
+
           {/* Contact Button */}
           <div className="hidden md:block">
             <Button asChild size="sm" className="rounded-full bg-primary/90 hover:bg-primary">
@@ -167,7 +160,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-gray-700 hover:text-primary"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
@@ -194,47 +187,40 @@ const Header = () => {
                 Innovation <ChevronDown className="ml-1 h-3 w-3" />
               </p>
               <div className="pl-4 flex flex-col space-y-2">
-                <a 
-                  href="#research" 
-                  className="text-sm text-gray-700 hover:text-primary transition-colors" 
+                {/* Patent first */}
+                <a
+                  href="#patent"
+                  className="text-sm text-gray-700 hover:text-primary transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     setMobileMenuOpen(false);
-                    document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
-                    setTimeout(() => {
-                      const researchTab = document.querySelector('[value="research"]') as HTMLButtonElement;
-                      researchTab?.click();
-                    }, 300);
-                  }}
-                >
-                  Research
-                </a>
-                <a 
-                  href="#patent" 
-                  className="text-sm text-gray-700 hover:text-primary transition-colors" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setMobileMenuOpen(false);
-                    document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
-                    setTimeout(() => {
-                      const patentTab = document.querySelector('[value="patent"]') as HTMLButtonElement;
-                      patentTab?.click();
-                    }, 300);
+                    switchInnovationTab("patent");
                   }}
                 >
                   Patent
                 </a>
-                <a 
-                  href="#projects" 
-                  className="text-sm text-gray-700 hover:text-primary transition-colors" 
+
+                {/* Research second */}
+                <a
+                  href="#research"
+                  className="text-sm text-gray-700 hover:text-primary transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     setMobileMenuOpen(false);
-                    document.getElementById('innovation')?.scrollIntoView({ behavior: 'smooth' });
-                    setTimeout(() => {
-                      const projectsTab = document.querySelector('[value="projects"]') as HTMLButtonElement;
-                      projectsTab?.click();
-                    }, 300);
+                    switchInnovationTab("research");
+                  }}
+                >
+                  Research
+                </a>
+
+                {/* Projects third */}
+                <a
+                  href="#projects"
+                  className="text-sm text-gray-700 hover:text-primary transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    switchInnovationTab("projects");
                   }}
                 >
                   Projects
@@ -253,7 +239,7 @@ const Header = () => {
             <a href="#contact" className="text-sm font-medium py-2 text-gray-800 hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Contact
             </a>
-            
+
             <Button className="mt-2 rounded-full" size="sm">
               <a href="#contact">Contact Me</a>
             </Button>
