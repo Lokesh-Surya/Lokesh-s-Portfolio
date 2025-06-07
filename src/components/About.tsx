@@ -41,7 +41,7 @@ const About = () => {
             
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
-                I am a <span className="font-semibold text-primary">Digital Transformation Engineer</span> with extensive experience working with leading global  <span className="font-semibold">energy, oil & gas, and chemical companies</span> across <span className="font-semibold">North America, Europe, and India</span> to spearhead multi-site digital initiatives that enhance operational resilience and asset performance.
+                I am a <span className="font-semibold text-primary">Intelligent Reliability & Asset Integrity Lead</span> with extensive experience working with leading global  <span className="font-semibold">energy, oil & gas, and chemical companies</span> across <span className="font-semibold">North America, Europe, and India</span> to spearhead multi-site digital initiatives that enhance operational resilience and asset performance.
               </p>
               
               <div className="border-l-4 border-primary pl-6 py-2">
