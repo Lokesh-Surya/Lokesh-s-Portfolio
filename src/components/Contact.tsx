@@ -1,11 +1,16 @@
-
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
+
+const SERVICE_ID = 'service_1t6s0cm';
+const TEMPLATE_ID_NOTIFY = 'template_bmi2zqc';    // Your Contact Us template
+const TEMPLATE_ID_REPLY = 'template_9l5g98e';     // Your Auto-reply template
+const PUBLIC_KEY = '9_GccdZqZLzEZOd14';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -25,22 +30,38 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
+
+    // Send notification email to you
+    emailjs.send(SERVICE_ID, TEMPLATE_ID_NOTIFY, templateParams, PUBLIC_KEY)
+      .then(() => {
+        // Send auto-reply email to the user
+        return emailjs.send(SERVICE_ID, TEMPLATE_ID_REPLY, templateParams, PUBLIC_KEY);
+      })
+      .then(() => {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      })
+      .catch((error) => {
+        toast({
+          variant: "destructive",
+          title: "Oops! Something went wrong.",
+          description: error.text || "Please try again later.",
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
       });
-      
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      setIsSubmitting(false);
-    }, 1500);
   };
 
   return (
@@ -48,7 +69,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">Contact Me</h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-12"></div>
-        
+
         <div className="grid md:grid-cols-5 gap-8">
           {/* Contact Info */}
           <div className="md:col-span-2 space-y-6">
@@ -56,7 +77,7 @@ const Contact = () => {
             <p className="text-gray-600 mb-8">
               Have a project in mind or want to discuss digital transformation opportunities? Feel free to reach out.
             </p>
-            
+
             <div className="space-y-6">
               <Card>
                 <CardContent className="flex items-center gap-4 p-4">
@@ -69,7 +90,7 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card>
                 <CardContent className="flex items-center gap-4 p-4">
                   <div className="bg-primary/10 p-3 rounded-full">
@@ -81,7 +102,7 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
-              
+
               <Card>
                 <CardContent className="flex items-center gap-4 p-4">
                   <div className="bg-primary/10 p-3 rounded-full">
@@ -95,7 +116,7 @@ const Contact = () => {
               </Card>
             </div>
           </div>
-          
+
           {/* Contact Form */}
           <div className="md:col-span-3">
             <Card>
@@ -115,7 +136,7 @@ const Contact = () => {
                         onChange={handleChange}
                       />
                     </div>
-                    
+
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium">
                         Your Email
@@ -131,7 +152,7 @@ const Contact = () => {
                       />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="subject" className="text-sm font-medium">
                       Subject
@@ -145,7 +166,7 @@ const Contact = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
                       Message
@@ -160,9 +181,9 @@ const Contact = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  
-                  <Button 
-                    type="submit" 
+
+                  <Button
+                    type="submit"
                     className="w-full"
                     disabled={isSubmitting}
                   >
