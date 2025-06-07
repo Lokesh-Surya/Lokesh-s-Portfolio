@@ -26,7 +26,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden pt-20 md:pt-0">
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20 md:pt-0">
       {/* Background with bluish gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-blue-50 to-slate-200 z-0"></div>
       
