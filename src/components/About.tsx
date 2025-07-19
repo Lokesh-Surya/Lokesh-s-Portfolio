@@ -41,31 +41,31 @@ const About = () => {
             
             <div className="space-y-6 text-gray-700">
               <p className="text-lg leading-relaxed">
-                I am an <span className="font-semibold text-primary">Intelligent Reliability & Asset Integrity Lead</span> with extensive experience working with leading global  <span className="font-semibold">energy, oil & gas, and chemical companies</span> across <span className="font-semibold">North America, Europe, and India</span> to spearhead multi-site digital initiatives that enhance operational resilience and asset performance.
+                As a <span className="text-gradient font-bold">PMP®</span> <span className="text-black font-bold">certified</span> <span className="text-gradient font-bold">Project Manager</span> and an <span className="text-gradient font-bold">Intelligent</span> <span className="text-black font-bold">Reliability & Asset Integrity</span> <span className="text-gradient font-bold">Expert</span> with extensive experience in spearheading multi-site digital transformation initiatives for leading global <span className="text-black font-semibold">energy, oil & gas, and chemical companies</span> across <span className="text-black font-semibold">North America, Europe, and India</span>, enhancing operational resilience and asset performance.
               </p>
               
               <div className="border-l-4 border-primary pl-6 py-2">
                 <p className="text-lg">
-                  Leveraging a strong foundation in engineering and digital technology, I lead cross-functional teams to solve complex industrial challenges through smart, scalable solutions that improve <span className="font-semibold">asset integrity, safety, and operational efficiency.</span>
+                  My credentials, including <span className="text-gradient font-bold">Project Management Professional (PMP®)</span>, <span className="text-gradient font-bold">Certified Maintenance and Reliability Professional (CMRP®)</span>, <span className="text-black font-semibold">Six Sigma Green Belt (SSGB)</span>, and <span className="text-black font-semibold">Theory of Constraints (TOC)</span>, underpin my expertise in managing all facets of the project lifecycle, from scope and budget to quality and proactive risk mitigation. I utilize <span className="text-black font-semibold">Agile and Waterfall frameworks</span> and foster cross-functional collaboration for major <span className="text-gradient font-bold">Fortune 500</span> clients like <span className="text-gradient font-bold">PHILLIPS 66, SHELL PLC, and CELANESE</span>.
                 </p>
               </div>
               
               <p className="text-lg leading-relaxed">
-                I combine <span className="font-semibold">strategic vision with hands-on execution</span> to ensure projects are aligned with <span className="font-semibold">business objectives, regulatory standards</span>, and stakeholder requirements, fostering sustainable and measurable impact.
+                Combining <span className="text-black font-semibold">strategic vision with hands-on execution</span>, I lead teams to solve <span className="text-black font-semibold">complex industrial challenges</span>, translating high-level business objectives into granular technical execution while ensuring alignment with <span className="text-black font-semibold">business objectives and regulatory standards</span>.
               </p>
               
               <p className="text-lg leading-relaxed">
-                Passionate about emerging technologies, I champion the adoption of AI, Machine Learning, and automation to drive <span className="font-semibold">predictive maintenance, digital twins</span>, and other advanced frameworks that enhance real-time decision-making.
+                Passionate about <span className="text-gradient font-bold">emerging technologies</span>, I champion the adoption of <span className="text-gradient font-bold">AI, Machine Learning, and automation</span> to drive <span className="text-black font-semibold">predictive maintenance, digital twins</span>, and other advanced frameworks.
               </p>
               
               <div className="flex items-center space-x-3 pl-4 border-l-4 border-blue-300">
                 <p className="text-lg font-medium">
-                  Skilled and certified in <span className="font-semibold text-primary">Project Management</span>, I excel at coordinating resources, mitigating risks, and managing timelines and budgets to deliver projects <span className="font-semibold">on time and within scope</span>, while maintaining high-quality standards.
+                  I have a proven track record of implementing <span className="text-black font-semibold">process improvements</span>, identifying <span className="text-black font-semibold">bottlenecks</span>, and enhancing <span className="text-gradient font-bold">operational excellence</span>, consistently delivering <span className="text-black font-semibold">high-quality features and measurable results</span>.
                 </p>
               </div>
               
               <p className="text-lg leading-relaxed">
-                I believe digital transformation isn't just about implementing technology - it's about reimagining workflows, empowering people, and building a culture of continuous improvement.
+                I believe <span className="text-gradient font-bold">digital transformation</span> isn't just about implementing technology—it's about <span className="text-black font-semibold">reimagining workflows, empowering people, and building a culture of continuous improvement</span>.
               </p>
             </div>
           </div>
