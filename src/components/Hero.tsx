@@ -57,10 +57,12 @@ const Hero = () => {
           </h2>
           
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <span className="text-black">PMP® Certified </span>
+            <span className="text-gradient">PMP® </span>
+            <span className="text-black">Certified </span>
             <span className="text-gradient">Project Manager</span>
             <br />
-            <span className="text-black">Intelligent Reliability & Asset Integrity </span>
+            <span className="text-gradient">Intelligent </span>
+            <span className="text-black">Reliability & Asset Integrity </span>
             <span className="text-gradient">Expert</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
