@@ -41,7 +41,7 @@ const Hero = () => {
           <div className="flex justify-center mb-8 animate-fade-in" style={{ animationDelay: "0.05s" }}>
             <Avatar className="h-40 w-40 border-4 border-white shadow-lg">
               <AvatarImage
-                src="/IMG_9914.jpg"
+                src="/lovable-uploads/920d3b92-d111-4493-9a16-9294f043a7ee.png"
                 alt="Lokesh"
                 className="object-cover"
               />

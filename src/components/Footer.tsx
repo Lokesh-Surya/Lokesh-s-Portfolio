@@ -83,7 +83,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {currentYear} Lokesh | Intelligent Reliability & Asset Integrity Lead. All rights reserved.</p>
+          <p>&copy; {currentYear} Lokesh | PMP® Certified Project Manager | Intelligent Reliability & Asset Integrity Expert. All rights reserved.</p>
         </div>
       </div>
     </footer>
