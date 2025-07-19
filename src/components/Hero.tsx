@@ -57,7 +57,8 @@ const Hero = () => {
           </h2>
           
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <span className="text-gradient">PMP® Certified Project Manager</span> | Intelligent Reliability & Asset Integrity <span className="text-gradient">Expert</span>
+            <span className="text-gradient">PMP® Certified Project Manager</span> | Intelligent<br />
+            Reliability & Asset Integrity <span className="text-gradient">Expert</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             Innovating at the intersection of technology, business, and design to drive meaningful change and digital excellence.
