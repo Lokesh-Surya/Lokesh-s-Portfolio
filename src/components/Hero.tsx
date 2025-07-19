@@ -43,7 +43,7 @@ const Hero = () => {
               <AvatarImage
                 src="/lovable-uploads/920d3b92-d111-4493-9a16-9294f043a7ee.png"
                 alt="Lokesh"
-                className="object-cover"
+                className="object-cover object-top"
               />
               <AvatarFallback className="text-5xl bg-gradient-to-br from-blue-400 to-primary text-white">
                 L
@@ -57,7 +57,7 @@ const Hero = () => {
           </h2>
           
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <span className="text-gradient">Intelligent</span> Reliability & Asset Integrity <span className="text-gradient">Lead</span>
+            <span className="text-gradient">PMP® Certified Project Manager</span> | Intelligent Reliability & Asset Integrity <span className="text-gradient">Expert</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             Innovating at the intersection of technology, business, and design to drive meaningful change and digital excellence.
